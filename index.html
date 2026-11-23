@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>דער ביאלה הויף · הכנסת אורחים פשיסחה</title>
+<meta name="description" content="דער ביאלה הויף בפשיסחה — מרכז לתורה, תפילה וחסד בצל ציון רשכבה״ג היהודי הקדוש ורבי שמחה בונים זי״ע. הכנסת אורחים, מקווה טהרה, חדרי לינה, סעודות כיד המלך ושבתות מרוממות.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --wine:#6a0f1e;--wine2:#8c1a2c;--wine-dk:#2b0810;--fire:#e0662a;--fire2:#f3a33a;
+  --gold:#d1a54a;--gold2:#f0d79a;--gold-dk:#9b7428;
+  --parch:#ffffff;--parch2:#f5f1ff;--ink:#1f1714;--muted:#6e6158;--white:#fffdf8;--line:rgba(106,15,30,.14);
+  --blue:#1f3f73;--teal:#1f6f6a;--green:#3c6e2f;
+  --serif:"Frank Ruhl Libre","David",serif;--sans:"Heebo","Arial Hebrew",Arial,sans-serif;
+  --r:18px;--sh:0 20px 50px -22px rgba(43,8,16,.5)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:150px}
+body{margin:0;background:var(--parch);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4{font-family:var(--serif);line-height:1.2;margin:0}
+.wrap{width:min(1220px,92vw);margin-inline:auto}
+section{padding:90px 0;position:relative}
+.eyebrow{font-weight:500;letter-spacing:.12em;color:var(--fire);font-size:13.5px;display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.eyebrow::before{content:"";width:30px;height:2px;background:linear-gradient(90deg,var(--fire2),var(--fire));border-radius:2px}
+.h2{font-size:clamp(30px,4.2vw,50px);font-weight:900;color:var(--wine)}
+.lead{font-size:18.5px;color:var(--muted);max-width:760px;margin-top:14px}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-weight:500;font-size:16px;padding:13px 26px;border-radius:999px;border:1.5px solid transparent;cursor:pointer;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-fire{background:linear-gradient(135deg,var(--fire2),var(--fire));color:#fff;box-shadow:0 12px 28px -10px rgba(224,102,42,.8)}
+.btn-gold{background:linear-gradient(135deg,var(--gold2),var(--gold) 60%,var(--gold-dk));color:var(--wine-dk);box-shadow:0 12px 28px -12px rgba(209,165,74,.9)}
+.btn-wine{background:var(--wine);color:#fff}.btn-wine:hover{background:var(--wine2)}
+.btn-ghost{border-color:rgba(255,255,255,.6);color:#fff;background:rgba(255,255,255,.08);backdrop-filter:blur(6px)}
+.btn-line{border-color:var(--wine);color:var(--wine);background:transparent}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}.reveal.in{opacity:1;transform:none}
+
+/* header */
+.top{position:fixed;inset:0 0 auto 0;z-index:60;background:linear-gradient(180deg,#3a0a15,#2b0810);box-shadow:0 8px 30px rgba(0,0,0,.25)}
+.bar1{display:flex;align-items:center;gap:22px;padding:10px 0}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+.seal{width:50px;height:50px;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--gold2),var(--gold) 55%,var(--gold-dk));display:grid;place-items:center;font-family:var(--serif);font-weight:900;color:var(--wine-dk);font-size:13px;line-height:1;text-align:center;box-shadow:0 0 0 3px rgba(240,215,154,.25),0 0 18px rgba(243,163,58,.45)}
+.logo-t{font-family:var(--serif);font-weight:900;font-size:22px;line-height:1.05}
+.logo-t small{display:block;font-family:var(--sans);font-weight:300;font-size:12.5px;color:var(--gold2);letter-spacing:.04em;margin-top:3px}
+.menu{display:flex;gap:20px;margin-inline-start:auto;list-style:none;padding:0;margin-block:0}
+.menu a{color:#f4e8d4;text-decoration:none;font-size:15px;opacity:.92}
+.menu a:hover{color:var(--gold2)}
+.burger{display:none;background:none;border:0;color:#fff;font-size:28px;cursor:pointer;margin-inline-start:auto}
+/* story circles */
+.stories{display:flex;gap:18px;overflow-x:auto;padding:6px 2px 12px;scrollbar-width:none}
+.stories::-webkit-scrollbar{display:none}
+.st{flex:none;display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;background:none;border:0;color:#f4e8d4;font-family:var(--sans);font-size:12.5px;width:76px}
+.ring{width:66px;height:66px;border-radius:50%;padding:3px;background:conic-gradient(from 210deg,var(--fire2),var(--fire),#c2185b,var(--gold),var(--fire2));transition:transform .25s}
+.st:hover .ring{transform:scale(1.07)}
+.ring img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:3px solid #2b0810}
+.st.seen .ring{background:linear-gradient(#7a6a5a,#7a6a5a)}
+.st span{white-space:nowrap;line-height:1.2}
+
+/* hero */
+.hero{min-height:100vh;min-height:100svh;padding:0;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:#140306}
+.slides{position:absolute;inset:0}
+.slides div{position:absolute;inset:0;background:center/cover no-repeat;opacity:0;transform:scale(1.07);transition:opacity 1.6s,transform 9s linear}
+.slides div.on{opacity:1;transform:scale(1)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,3,6,.25) 0%,rgba(20,3,6,.1) 40%,rgba(20,3,6,.78) 78%,rgba(20,3,6,.96))}
+.hero-in{position:relative;z-index:2;padding:0 0 64px;width:min(1220px,92vw);margin-inline:auto}
+.flame{display:inline-flex;align-items:center;gap:10px;background:rgba(224,102,42,.18);border:1px solid rgba(243,163,58,.5);color:var(--gold2);padding:6px 16px;border-radius:999px;font-size:14px;backdrop-filter:blur(6px)}
+.hero h1{font-size:clamp(40px,7vw,90px);font-weight:900;margin:20px 0 6px;text-shadow:0 6px 30px rgba(0,0,0,.45)}
+.hero h1 em{font-style:normal;display:block;font-size:.5em;font-weight:500;margin-top:8px;background:linear-gradient(90deg,var(--gold2),var(--fire2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:clamp(17px,1.6vw,20.5px);max-width:700px;color:#f1e4cf;margin:12px 0 28px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.live{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:38px;padding-top:20px;border-top:1px solid rgba(240,215,154,.25);font-size:15px;color:#ecdfca}
+.live b{color:var(--gold2);font-weight:500}
+.dot{width:8px;height:8px;border-radius:50%;background:#59d98e;display:inline-block;margin-inline-end:6px;animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(89,217,142,.7)}70%{box-shadow:0 0 0 10px rgba(89,217,142,0)}100%{box-shadow:0 0 0 0 rgba(89,217,142,0)}}
+
+/* three houses medallions */
+.houses{background:linear-gradient(180deg,#140306,var(--wine-dk) 40%,var(--wine-dk));color:#fff;padding:70px 0 90px}
+.hgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:40px}
+.house{text-align:center;cursor:pointer;text-decoration:none;color:#fff}
+.oval{position:relative;width:min(300px,100%);aspect-ratio:5/4;margin:0 auto;border-radius:50%;padding:10px;background:conic-gradient(from 0deg,var(--gold-dk),var(--gold2),var(--gold),var(--gold-dk),var(--gold2),var(--gold-dk));box-shadow:0 0 0 2px rgba(240,215,154,.3),0 20px 40px -10px rgba(0,0,0,.6),0 0 40px rgba(243,163,58,.25);transition:transform .35s}
+.house:hover .oval{transform:translateY(-6px) rotate(-1deg)}
+.oval img{width:100%;height:100%;object-fit:cover;border-radius:50%;border:3px solid #fff3d6}
+.ribbon{display:inline-block;margin-top:-26px;position:relative;z-index:2;background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--wine-dk);font-family:var(--serif);font-weight:900;font-size:21px;padding:8px 26px;border-radius:999px;box-shadow:0 8px 20px rgba(0,0,0,.35)}
+.house.ohel .oval{background:conic-gradient(from 0deg,#0d6b63,#3fc1a9,#f0d79a,#0d6b63,#3fc1a9,#0d6b63);box-shadow:0 0 0 2px rgba(63,193,169,.35),0 20px 40px -10px rgba(0,0,0,.6),0 0 46px rgba(63,193,169,.35)}
+.house.ohel .oval img{border-color:#e6fff8}
+.house.ohel .ribbon{background:linear-gradient(135deg,#3fc1a9,#0d6b63);color:#fff}
+.house p{color:#dccbb0;font-size:15.5px;max-width:330px;margin:14px auto 0}
+
+/* countdown */
+.count{background:linear-gradient(135deg,var(--fire2),var(--fire) 50%,#c23b1f);color:#fff;padding:46px 0}
+.cgrid{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:24px;align-items:center}
+.count h3{font-size:clamp(26px,3vw,36px)}
+.count p{margin:6px 0 0;color:#ffe9d6}
+.cd{background:rgba(0,0,0,.18);border:1px solid rgba(255,255,255,.3);border-radius:16px;padding:18px 20px}
+.cd h4{font-size:19px}.cd .d{font-size:13.5px;color:#ffe2c9;margin:2px 0 10px}
+.cd .n{display:flex;gap:8px;font-family:var(--serif)}
+.cd .n div{flex:1;text-align:center;background:rgba(255,255,255,.14);border-radius:10px;padding:6px 0}
+.cd .n b{display:block;font-size:28px;font-weight:900;line-height:1.1}.cd .n small{font-family:var(--sans);font-size:11.5px}
+
+/* tour steps */
+.tour{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px;counter-reset:s}
+.step{background:var(--white);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);position:relative}
+.step img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.step div{padding:18px 20px 22px}
+.step::before{counter-increment:s;content:counter(s);position:absolute;top:14px;inset-inline-start:14px;width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--fire2),var(--fire));color:#fff;font-family:var(--serif);font-weight:900;font-size:21px;display:grid;place-items:center;box-shadow:0 6px 16px rgba(0,0,0,.3)}
+.step h4{font-size:21px;color:var(--wine)}.step p{margin:6px 0 0;font-size:15px;color:var(--muted)}
+.gabbai{margin-top:34px;background:var(--white);border-inline-start:4px solid var(--gold);border-radius:0 16px 16px 0;padding:22px 28px;font-family:var(--serif);font-size:19.5px;color:var(--wine)}
+.gabbai small{display:block;font-family:var(--sans);font-size:14px;color:var(--muted);margin-top:8px}
+
+/* services */
+.svc{background:var(--parch2)}
+.sgrid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;margin-top:44px}
+.s{position:relative;border-radius:var(--r);overflow:hidden;min-height:310px;grid-column:span 4;background:#000;box-shadow:var(--sh)}
+.s.w{grid-column:span 8}.s.h{grid-column:span 6}
+.s img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.s:hover img{transform:scale(1.06)}
+.s .t{position:absolute;inset:auto 0 0 0;padding:24px;background:linear-gradient(transparent,rgba(20,4,8,.9));color:#fff}
+.s h3{font-size:26px}.s p{margin:6px 0 0;font-size:15px;color:#efe1c9;max-width:560px}
+.chip{position:absolute;top:16px;inset-inline-start:16px;color:#fff;font-size:13px;font-weight:500;padding:4px 13px;border-radius:999px;background:var(--teal)}
+.chip.f{background:var(--fire)}.chip.b{background:var(--blue)}.chip.g{background:var(--gold-dk)}
+.beds{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}.beds span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:2px 12px;font-size:13.5px}
+
+/* shabbos */
+.shab{background:#120408;color:#fff;overflow:hidden}
+.shab .h2{color:#fff}.shab .lead{color:#dccbb0}
+.mosaic{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:240px 240px;gap:12px;margin-top:40px}
+.mosaic div{border-radius:14px;overflow:hidden;background:center/cover;cursor:zoom-in;transition:transform .4s}
+.mosaic div:hover{transform:scale(1.02)}
+.mosaic .big{grid-row:span 2}
+.shab-row{display:grid;grid-template-columns:1.2fr 1fr;gap:30px;margin-top:30px;align-items:center}
+.vid{border-radius:16px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.5);background:#000}
+.vid video{width:100%;max-height:520px;object-fit:cover}
+
+/* rebbe */
+.rebbe{background:linear-gradient(180deg,var(--parch),var(--parch2))}
+.rgrid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center}
+.rphotos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.rphotos div{border-radius:16px;overflow:hidden;background:center/cover;aspect-ratio:1;box-shadow:var(--sh);cursor:zoom-in}
+.rphotos div:first-child{grid-column:span 2;aspect-ratio:16/10}
+.facts{display:grid;gap:12px;margin-top:22px}
+.facts div{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:14px 18px;display:flex;gap:14px;align-items:flex-start}
+.facts i{font-style:normal;font-size:24px;line-height:1}
+.facts b{font-family:var(--serif);font-size:18px;color:var(--wine);display:block}
+.facts span{font-size:15px;color:var(--muted)}
+
+/* stories */
+.tales{background:var(--wine-dk);color:#fff}
+.tales .h2{color:#fff}.tales .lead{color:#dccbb0}
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.tale{background:linear-gradient(160deg,rgba(255,255,255,.08),rgba(255,255,255,.02));border:1px solid rgba(240,215,154,.2);border-radius:var(--r);padding:26px;cursor:pointer;transition:transform .25s,border-color .25s;position:relative;overflow:hidden}
+.tale:hover{transform:translateY(-4px);border-color:var(--gold)}
+.tale .ic{font-size:30px}
+.tale h4{font-size:22px;color:var(--gold2);margin:10px 0 8px}
+.tale p{font-size:15.5px;color:#e6d7bf;margin:0;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.tale .src{font-size:13px;color:#bfa98a;margin-top:12px;display:block}
+.tale .more{color:var(--fire2);font-size:14.5px;margin-top:8px;display:inline-block}
+
+/* timeline */
+.tl{position:relative;margin-top:44px}
+.tl::before{content:"";position:absolute;top:0;bottom:0;right:50%;width:3px;background:linear-gradient(var(--fire2),var(--wine));transform:translateX(50%);border-radius:3px}
+.ti{display:grid;grid-template-columns:1fr 1fr;gap:70px;margin-bottom:36px;position:relative}
+.ti::before{content:"";position:absolute;right:50%;top:20px;width:18px;height:18px;border-radius:50%;background:var(--fire);border:4px solid var(--parch);box-shadow:0 0 0 2px var(--fire);transform:translateX(50%);z-index:1}
+.ti .c{background:var(--white);border-radius:14px;padding:20px 22px;box-shadow:0 12px 30px -20px rgba(43,8,16,.6)}
+.ti:nth-child(even) .c{grid-column:2}
+.ti .y{font-family:var(--serif);color:var(--fire);font-weight:700}
+.ti h4{font-size:21px;color:var(--wine);margin:2px 0 6px}
+.ti p{margin:0;font-size:15.5px;color:var(--muted)}
+.ti img{border-radius:10px;margin-top:12px;aspect-ratio:16/9;object-fit:cover;width:100%}
+
+/* news */
+.ngrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+.nw{background:var(--white);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);display:flex;flex-direction:column}
+.nw img{aspect-ratio:16/10;object-fit:cover;width:100%}
+.nw div{padding:18px 22px 22px}
+.nw small{display:inline-block;background:var(--parch2);color:var(--wine);border-radius:999px;padding:2px 10px;font-size:12.5px;font-weight:500}
+.nw h4{font-size:20.5px;color:var(--wine);margin:8px 0 6px}.nw p{font-size:15px;color:var(--muted);margin:0}
+
+/* videos */
+.vgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:36px}
+.vc{background:#000;border-radius:16px;overflow:hidden;box-shadow:var(--sh)}
+.vc video{width:100%;aspect-ratio:9/12;object-fit:cover}
+.vc p{margin:0;padding:12px 16px;background:var(--wine-dk);color:#efe1c9;font-size:15px}
+
+/* zmanim */
+.zm{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:26px}
+.z{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:14px 18px}
+.z small{color:var(--muted);font-size:13.5px;display:block}.z b{font-family:var(--serif);font-size:27px;color:var(--wine)}
+.z.now{background:linear-gradient(135deg,var(--fire2),var(--fire));border:0}.z.now small,.z.now b{color:#fff}
+.daypick{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:16px}
+.daypick input{font-family:var(--sans);font-size:15px;padding:8px 12px;border-radius:10px;border:1px solid var(--line);background:var(--white)}
+.hebdate{font-family:var(--serif);font-size:20px;color:var(--wine)}
+
+/* forms */
+.forms{background:linear-gradient(180deg,var(--parch2),var(--parch))}
+.tabs{display:inline-flex;flex-wrap:wrap;background:var(--white);border:1px solid var(--line);border-radius:999px;padding:5px;margin:30px 0 24px}
+.tabs button{font-family:var(--sans);font-size:15.5px;border:0;background:none;padding:10px 22px;border-radius:999px;cursor:pointer;color:var(--muted)}
+.tabs button.on{background:var(--wine);color:#fff}
+.panel{display:none;background:var(--white);border-radius:22px;box-shadow:var(--sh);overflow:hidden}
+.panel.on{display:grid;grid-template-columns:1fr 1.3fr}
+.side{background:center/cover;position:relative;min-height:440px}
+.side::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(43,8,16,0) 45%,rgba(43,8,16,.85))}
+.side div{position:absolute;z-index:1;bottom:0;padding:32px;color:#fff}
+.side h3{font-size:30px}.side p{color:#efe1c9;font-size:15.5px}
+form{padding:34px;display:grid;grid-template-columns:1fr 1fr;gap:15px 18px}
+label{display:flex;flex-direction:column;gap:6px;font-size:14.5px;color:var(--muted)}
+.full{grid-column:1/-1}
+input,select,textarea{font-family:var(--sans);font-size:16px;padding:11px 14px;border-radius:10px;border:1px solid #dccfb6;background:#fffcf6;color:var(--ink);outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--fire);box-shadow:0 0 0 3px rgba(224,102,42,.18)}
+textarea{min-height:90px;resize:vertical}
+.chips{display:flex;flex-wrap:wrap;gap:8px}.chips label{flex-direction:row}.chips input{display:none}
+.chips span{border:1px solid #dccfb6;border-radius:999px;padding:7px 15px;cursor:pointer;font-size:14.5px;color:var(--ink);background:#fffcf6}
+.chips input:checked+span{background:var(--wine);color:#fff;border-color:var(--wine)}
+.nrow{display:grid;grid-template-columns:1fr auto 1fr auto;gap:8px;align-items:center}
+.nrow em{font-style:normal;color:var(--muted);font-size:14px}.nrow button{border:0;background:none;color:#a33;font-size:20px;cursor:pointer}
+.names{display:flex;flex-direction:column;gap:10px}
+.addn{justify-self:start;background:none;border:1px dashed var(--fire);color:var(--fire);padding:7px 16px;border-radius:999px;cursor:pointer;font-family:var(--sans)}
+.result{grid-column:1/-1;display:none;background:var(--parch);border:1px solid var(--line);border-radius:14px;padding:18px}
+.result.on{display:block}
+.result pre{white-space:pre-wrap;font-family:var(--sans);font-size:15px;margin:10px 0 14px;background:var(--white);padding:14px;border-radius:10px;border:1px solid var(--line)}
+.acts{display:flex;flex-wrap:wrap;gap:10px}.ok{color:#1f6b3a;font-weight:500}
+
+/* partner */
+.partner{background:radial-gradient(circle at 80% 0%,#8c1a2c,#2b0810 60%);color:#fff}
+.partner .h2{color:#fff}
+.pgrid{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;margin-top:30px}
+.pcards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pc{background:rgba(255,255,255,.07);border:1px solid rgba(240,215,154,.25);border-radius:16px;padding:20px;cursor:pointer;transition:background .2s,transform .2s}
+.pc:hover{background:rgba(224,102,42,.18);transform:translateY(-3px)}
+.pc i{font-style:normal;font-size:28px}.pc b{display:block;font-family:var(--serif);font-size:20px;color:var(--gold2);margin-top:6px}
+.pc span{font-size:14.5px;color:#e5d6bd}
+.donate{margin-top:20px;background:rgba(0,0,0,.28);border:1px solid rgba(240,215,154,.35);border-radius:20px;padding:18px 20px}
+.donate h3{font-size:24px;color:var(--gold2);margin-bottom:12px}
+.kbtn{display:flex;align-items:center;gap:14px;background:linear-gradient(135deg,#1565c0,#0d47a1);color:#fff;text-decoration:none;border-radius:16px;padding:14px 18px;margin-bottom:12px;box-shadow:0 10px 25px rgba(13,71,161,.45);transition:transform .2s}.kbtn:hover{transform:translateY(-2px)}.kbtn span{font-size:30px}.kbtn b{font-size:20px;display:block}.kbtn small{color:#d6e4ff;font-size:13.5px}
+.dways{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.dways>*{display:flex;flex-direction:column;gap:2px;background:rgba(255,255,255,.08);border-radius:14px;padding:12px;color:#fff;text-decoration:none;transition:background .2s}
+.dways>a:hover{background:rgba(243,163,58,.25)}
+.dways i{font-style:normal;font-size:24px}.dways b{font-size:17px}.dways span{font-size:13.5px;color:#e5d6bd}
+@media (max-width:700px){.dways{grid-template-columns:1fr}}
+.menu a.don{background:linear-gradient(135deg,var(--fire2),var(--fire));color:#fff!important;border-radius:999px;padding:4px 14px}
+.phones{position:fixed;bottom:84px;inset-inline-start:20px;z-index:56;background:#fff;border-radius:18px;box-shadow:0 20px 50px rgba(0,0,0,.35);padding:10px;display:none;min-width:270px}
+.phones.on{display:block}
+.phones a{display:block;padding:10px 12px;border-radius:12px;text-decoration:none;color:var(--ink,#2a1a12)}
+.phones a:hover{background:#fff1e6}
+.phones small{display:block;color:#8a6d5a;font-size:13px}.phones b{direction:ltr;unicode-bidi:embed;font-size:17px}
+.kehilot{margin-top:18px;background:rgba(0,0,0,.25);border-radius:14px;padding:16px 20px;font-size:15px;color:#efe1c9}
+
+/* gallery */
+.gal{background:#120408;color:#fff}.gal .h2{color:#fff}
+.gfilter{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0}
+.gfilter button{background:transparent;border:1px solid rgba(240,215,154,.35);color:#ecdfca;padding:7px 17px;border-radius:999px;cursor:pointer;font-family:var(--sans);font-size:14.5px}
+.gfilter button.on{background:linear-gradient(135deg,var(--fire2),var(--fire));border-color:transparent;color:#fff}
+.masonry{columns:4 240px;column-gap:12px}
+.masonry figure{margin:0 0 12px;break-inside:avoid;border-radius:12px;overflow:hidden;position:relative;cursor:zoom-in}
+.masonry img{width:100%;transition:transform .8s}.masonry figure:hover img{transform:scale(1.05)}
+.masonry figcaption{position:absolute;inset:auto 0 0 0;padding:24px 12px 8px;font-size:13.5px;background:linear-gradient(transparent,rgba(0,0,0,.75));opacity:0;transition:opacity .3s}
+.masonry figure:hover figcaption{opacity:1}
+
+/* guide */
+.ggrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.g{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.g .i{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;font-size:24px;margin-bottom:12px;background:linear-gradient(135deg,var(--gold2),var(--gold))}
+.g h4{font-size:21px;color:var(--wine);margin-bottom:6px}.g p,.g li{font-size:15.5px;color:var(--muted)}
+.g ul{padding-inline-start:18px;margin:6px 0 0}
+.route{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.route span{background:var(--parch2);border-radius:999px;padding:3px 12px;font-size:14px;color:var(--wine)}
+.faq{margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+details{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:14px 20px}
+summary{cursor:pointer;font-family:var(--serif);font-size:19px;color:var(--wine);list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::after{content:"+";color:var(--fire);font-size:24px;line-height:1}details[open] summary::after{content:"–"}
+details p{color:var(--muted);font-size:15.5px;margin:8px 0 0}
+
+/* contact */
+.contact{background:center/cover;color:#fff;text-align:center;padding:120px 0}
+.contact::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(43,8,16,.85),rgba(43,8,16,.92))}
+.contact .wrap{position:relative}
+.contact h2{font-size:clamp(34px,5vw,60px);font-weight:900}
+.contact p{color:#ecdfca;font-size:19px;max-width:700px;margin:16px auto 28px}
+.cinfo{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:36px}
+.cinfo a,.cinfo div{background:rgba(255,255,255,.08);border:1px solid rgba(240,215,154,.3);border-radius:14px;padding:15px 22px;text-decoration:none;min-width:230px;text-align:start}
+.cinfo small{display:block;color:var(--gold2);font-size:13px}.cinfo b{font-size:18px;font-weight:500;unicode-bidi:plaintext}
+footer{background:#0f0306;color:#bba98f;padding:46px 0 26px;font-size:14.5px}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
+footer h5{font-family:var(--serif);font-size:18px;color:var(--gold2);margin:0 0 10px}
+footer ul{list-style:none;padding:0;margin:0}footer li{margin:5px 0}footer a{text-decoration:none}footer a:hover{color:var(--gold2)}
+.copy{border-top:1px solid rgba(240,215,154,.15);margin-top:30px;padding-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px}
+
+
+/* colorful backgrounds */
+.svc{background:linear-gradient(135deg,#fff1e6 0%,#f3ecff 50%,#e8f6f4 100%)!important}
+#tour{background:linear-gradient(180deg,#fff,#fff4ec)}
+#news{background:linear-gradient(135deg,#eef3ff,#fff0f3)!important}
+#zmanim{background:linear-gradient(135deg,#1f3f73,#2b0810);color:#fff}
+#zmanim .h2{color:#fff}#zmanim .hebdate{color:var(--gold2)}
+#zmanim .z{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18)}#zmanim .z small{color:#cfd8ef}#zmanim .z b{color:#fff}
+#zmanim p{color:#cfd8ef!important}
+.forms{background:linear-gradient(135deg,#fff3e9,#f1f4ff)!important}
+#guide{background:linear-gradient(180deg,#fff,#f0f7f4)}
+.step,.nw,.g,details,.z,.facts div{border-radius:20px}
+.nw small{background:linear-gradient(135deg,var(--fire2),var(--fire));color:#fff}
+/* rotating section backgrounds */
+.bgs{position:absolute;inset:0;overflow:hidden;z-index:0}
+.bgs div{position:absolute;inset:0;background:center/cover;opacity:0;transform:scale(1.06);transition:opacity 1.6s,transform 9s linear}
+.bgs div.on{opacity:1;transform:scale(1)}
+.bgs::after{content:"";position:absolute;inset:0;background:var(--ov,rgba(25,5,10,.78))}
+.has-bgs>.wrap{position:relative;z-index:1}
+/* timeline as horizontal strip */
+.tl{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px 2px 24px;margin-top:30px}
+.tl::before{display:none}
+.ti{flex:0 0 330px;display:block;margin:0;scroll-snap-align:start}
+.ti::before{display:none}
+.ti .c{background:rgba(255,255,255,.08);border:1px solid rgba(240,215,154,.25);color:#fff;padding:0;overflow:hidden;height:100%}
+.ti:nth-child(even) .c{grid-column:auto}
+.ti img{margin:0;border-radius:0;aspect-ratio:4/3}
+.ti .tx{padding:16px 18px 20px}
+.ti .y{display:inline-block;background:linear-gradient(135deg,var(--fire2),var(--fire));color:#fff;border-radius:999px;padding:2px 12px;font-size:14px}
+.ti h4{color:var(--gold2);margin-top:8px}.ti p{color:#e8dac3}
+.tl-nav{display:flex;gap:10px;margin-top:6px}.tl-nav button{width:46px;height:46px;border-radius:50%;border:1px solid rgba(240,215,154,.4);background:rgba(255,255,255,.08);color:#fff;font-size:22px;cursor:pointer}
+/* holocaust */
+.shoah{background:#0d0d0f;color:#e9e4dc}
+.shoah .h2{color:#fff}
+.sgrid2{display:grid;grid-template-columns:1.1fr 1fr;gap:44px;align-items:start;margin-top:30px}
+.stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:26px 0}
+.stat{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:16px;text-align:center}
+.stat b{display:block;font-family:var(--serif);font-size:34px;color:var(--fire2)}.stat span{font-size:13.5px;color:#bdb5a8}
+.shoah p{color:#d6cfc4}
+.bw{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.bw div{aspect-ratio:1;background:center/cover;border-radius:14px;filter:grayscale(1) contrast(1.05);cursor:zoom-in}
+.bw div:first-child{grid-column:span 2;aspect-ratio:16/10}
+.candle{display:flex;gap:14px;align-items:center;margin-top:24px;background:rgba(243,163,58,.08);border:1px solid rgba(243,163,58,.3);border-radius:16px;padding:16px 20px}
+.candle i{font-style:normal;font-size:34px;animation:flick 2.4s infinite}
+@keyframes flick{50%{filter:brightness(1.4);transform:scale(1.05)}}
+.srcs{font-size:13px;color:#8f877b;margin-top:18px}
+/* routes */
+.routes{background:linear-gradient(135deg,#0f3b3a,#1f3f73);color:#fff}
+.routes .h2{color:#fff}
+.rwrap{display:grid;grid-template-columns:1.1fr 1fr;gap:30px;margin-top:34px;align-items:start}
+.map{background:#fff;border:3px solid rgba(240,215,154,.7);border-radius:22px;padding:0;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.map svg{width:100%;height:auto;display:block}
+.map .pt{cursor:pointer}
+.map .pt circle{transition:r .2s}
+.map .pt:hover circle.o,.map .pt.on circle.o{r:18;fill:#e0662a}
+.rlist{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 14px}.rlist .rc{flex:0 0 300px;scroll-snap-align:start}
+.rc{display:flex;gap:14px;align-items:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:12px 16px;cursor:pointer;transition:background .2s}
+.rc:hover,.rc.on{background:rgba(243,163,58,.2);border-color:var(--fire2)}
+.rc .tm{flex:none;width:74px;height:74px;border-radius:50%;background:conic-gradient(var(--fire2) var(--p),rgba(255,255,255,.12) 0);display:grid;place-items:center}
+.rc .tm span{width:60px;height:60px;border-radius:50%;background:#173a55;display:grid;place-items:center;font-family:var(--serif);font-weight:900;font-size:15px;line-height:1.1;text-align:center}
+.rc b{font-family:var(--serif);font-size:20px;color:var(--gold2);display:block}.rc small{color:#cfe0e6;font-size:14px}
+.rc a{margin-inline-start:auto;flex:none;font-size:13px;color:#fff;text-decoration:none;background:rgba(255,255,255,.12);border-radius:999px;padding:6px 12px}
+@media (max-width:1000px){.sgrid2,.rwrap{grid-template-columns:1fr}.stat-row{grid-template-columns:1fr 1fr}}
+
+/* overlays */
+.ov{position:fixed;inset:0;z-index:100;background:rgba(10,2,4,.95);display:none;align-items:center;justify-content:center;flex-direction:column}
+.ov.on{display:flex}
+.ov .x{position:absolute;top:18px;left:18px;background:rgba(255,255,255,.12);border:0;color:#fff;font-size:26px;width:50px;height:50px;border-radius:50%;cursor:pointer;z-index:3}
+.lb img{max-width:92vw;max-height:82vh;border-radius:8px}
+.lb p{color:#ecdfca;margin-top:12px}
+.lb .pv,.lb .nx{position:absolute;top:50%;background:rgba(255,255,255,.12);border:0;color:#fff;font-size:30px;width:54px;height:54px;border-radius:50%;cursor:pointer}
+.lb .pv{right:18px}.lb .nx{left:18px}
+/* story viewer */
+.cpbox{background:#fff;border-radius:22px;padding:28px;width:min(420px,92vw);text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.5)}.cpbox .btn{justify-content:center;width:100%}
+.sv{width:min(440px,96vw);height:min(780px,92vh);position:relative;border-radius:18px;overflow:hidden;background:#000;box-shadow:0 30px 80px rgba(0,0,0,.7)}
+.sv .bars{position:absolute;top:10px;inset-inline:10px;display:flex;gap:4px;z-index:3}
+.sv .bars i{flex:1;height:3px;background:rgba(255,255,255,.3);border-radius:2px;overflow:hidden}
+.sv .bars i b{display:block;height:100%;width:0;background:#fff}
+.sv .hd{position:absolute;top:22px;inset-inline:14px;display:flex;align-items:center;gap:10px;z-index:3;color:#fff;font-weight:500;text-shadow:0 1px 4px #000}
+.sv .hd img{width:36px;height:36px;border-radius:50%;object-fit:cover;border:2px solid var(--gold)}
+.sv .pic{position:absolute;inset:0;background:center/contain no-repeat}
+.sv .blur{position:absolute;inset:-30px;background:center/cover no-repeat;filter:blur(24px) brightness(.55);transform:scale(1.1)}
+.sv .cap{position:absolute;inset:auto 0 0 0;padding:70px 22px 26px;background:linear-gradient(transparent,rgba(0,0,0,.85));color:#fff;z-index:2}
+.sv .cap h4{font-size:24px;color:var(--gold2)}.sv .cap p{margin:6px 0 0;font-size:15.5px;color:#f0e3cf}
+.sv .tap{position:absolute;top:0;bottom:0;width:40%;z-index:2;cursor:pointer}.sv .tap.r{right:0}.sv .tap.l{left:0}
+.tale-ov .box{background:var(--parch);color:var(--ink);border-radius:20px;width:min(720px,94vw);max-height:88vh;overflow:auto;padding:34px 36px}
+.tale-ov h3{font-size:30px;color:var(--wine)}.tale-ov .body{font-size:17.5px;line-height:1.9;margin-top:14px;white-space:pre-line}
+.tale-ov .src{color:var(--muted);font-size:14px;margin-top:16px;border-top:1px solid var(--line);padding-top:12px}
+
+.fab{position:fixed;bottom:20px;inset-inline-start:20px;z-index:55;display:flex;flex-direction:column;gap:10px}
+.fab a{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;font-size:22px;text-decoration:none;box-shadow:0 10px 25px rgba(0,0,0,.3)}
+.fab .k{background:linear-gradient(135deg,var(--fire2),var(--fire));color:#fff}.fab .p{background:var(--wine);color:#fff}
+.toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(140px);background:var(--wine-dk);color:#fff;padding:14px 24px;border-radius:12px;z-index:200;transition:transform .35s;border:1px solid var(--gold)}
+.toast.on{transform:translateX(-50%) translateY(0)}
+
+@media (max-width:1000px){
+  .menu{display:none;position:absolute;top:100%;inset-inline:0;flex-direction:column;background:#2b0810;padding:18px 6vw;gap:12px}.menu.open{display:flex}
+  .burger{display:block}
+  .hgrid,.tgrid,.ngrid,.vgrid,.ggrid{grid-template-columns:1fr 1fr}
+  .cgrid,.rgrid,.shab-row,.pgrid,.panel.on{grid-template-columns:1fr}
+  .tour{grid-template-columns:1fr 1fr}
+  .s,.s.w,.s.h{grid-column:span 12}
+  .zm{grid-template-columns:1fr 1fr}
+  .mosaic{grid-template-columns:1fr 1fr;grid-template-rows:200px 200px 200px}.mosaic .big{grid-column:span 2;grid-row:auto}
+  .tl::before{right:9px}.ti{grid-template-columns:1fr;gap:0;padding-inline-start:38px}.ti::before{right:9px}.ti:nth-child(even) .c{grid-column:1}
+  .faq,.fgrid{grid-template-columns:1fr}
+  .side{min-height:220px}
+}
+@media (max-width:620px){
+  section{padding:66px 0}
+  .hgrid,.tgrid,.ngrid,.vgrid,.ggrid,.tour,.pcards{grid-template-columns:1fr}
+  form{grid-template-columns:1fr;padding:22px}
+  .nrow{grid-template-columns:1fr 1fr auto}.nrow em{display:none}
+  .logo-t{font-size:18px}
+}
+</style>
+</head>
+<body>
+
+<header class="top" id="hdr">
+  <div class="wrap">
+    <div class="bar1">
+      <a class="logo" href="#top"><img src="img/logo_gold.png" alt="דער ביאלה הויף" style="height:54px;width:auto;filter:drop-shadow(0 0 8px rgba(243,163,58,.35))"><span class="logo-t" style="font-size:18px">הכנסת אורחים פשיסחה<small>מרכז לתורה, תפילה וחסד</small></span></a>
+      <ul class="menu" id="menu">
+        <li><a href="#houses">הבתים</a></li>
+        <li><a href="#services">הכנסת אורחים</a></li>
+        <li><a href="#shabbos">שבת בפשיסחה</a></li>
+        <li><a href="#rebbe">האדמו״ר</a></li>
+        <li><a href="#tales">סיפורים</a></li>
+        <li><a href="#routes">מסלולים</a></li>
+        <li><a href="#book">הזמנה</a></li>
+        <li><a href="https://ultra.kesherhk.info/external/categoryPage/610?moked=kehilot-site" target="_blank" rel="noopener" class="don">💝 תרומה</a></li>
+        <li><a href="#contact">צור קשר</a></li>
+      </ul>
+      <button class="burger" id="burger" aria-label="תפריט">☰</button>
+    </div>
+    <div class="stories" id="stories"></div>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="slides" id="slides">
+    <div style="background-image:url(img/shab1.jpg)"></div>
+    <div style="background-image:url(img/torch2.jpg)"></div>
+    <div style="background-image:url(img/ohel_night.jpg)"></div>
+    <div style="background-image:url(img/tablelux2.jpg)"></div>
+    <div style="background-image:url(img/walk2.jpg)"></div>
+  </div>
+  <div class="hero-in">
+    <span class="flame">🔥 ״להבה הודלקה בפשיסחה ושוב לא כבתה לעולם״</span>
+    <h1>הכנסת אורחים פשיסחה<em>דער ביאלה הויף — סמוך ונראה לאוהל הקדוש</em></h1>
+    <p>בנין הכנסת אורחים גדול ומפואר בצל ציון רשכבה״ג היהודי הקדוש ורבי שמחה בונים מפשיסחה זי״ע: מקווה טהרה מהודר, בית מדרש, חדרי לינה, סעודות כיד המלך ושבתות מרוממות — לכל יהודי באשר הוא.</p>
+    <div class="ctas">
+      <a class="btn btn-fire" href="#book">הזמנת לינה וסעודות ←</a>
+      <a class="btn btn-ghost" href="#book" data-tab="kvitel">שמות לתפילה בציון</a>
+      <a class="btn btn-ghost" href="#partner">שותפות עם אורחי רבינו</a>
+    </div>
+    <div class="live">
+      <span><i class="dot"></i>עכשיו בפשיסחה: <b id="l-time">—</b></span>
+      <span>היום: <b id="l-heb">—</b></span>
+      <span>שקיעה: <b id="l-sunset">—</b></span>
+      <span>📍 כ־100 ק״מ דרומית לוורשה</span>
+    </div>
+  </div>
+</section>
+
+<!-- THREE HOUSES -->
+<section class="houses" id="houses">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--gold2)">שלושה בתים · להבה אחת</div>
+    <h2 class="h2" style="color:#fff">ההויף של רבותינו בפשיסחה</h2>
+    <div class="hgrid">
+      <a class="house ohel reveal" href="#tour"><div class="oval"><img src="img/ohelclean.jpg" alt="היכל ציון הקודש"></div><span class="ribbon">היכל ציון הקודש</span><p>האוהל הקדוש על ציון היהודי הקדוש ורבי שמחה בונים זי״ע — מקום שרבים נושעו בו בכל הישועות.</p></a>
+      <a class="house reveal" href="#shul"><div class="oval"><img src="img/shulnew.jpg" alt="בית הכנסת המיוחס"></div><span class="ribbon">בית הכנסת המיוחס</span><p>בית הכנסת העתיק שבו התפללו רבותינו — וקדושתו חוזרת וננערת: השיפוץ החל.</p></a>
+      <a class="house reveal" href="#services"><div class="oval"><img src="img/campus.jpg" alt="קמפוס הכנסת אורחים"></div><span class="ribbon">קמפוס הכנסת אורחים</span><p>בית של תורה וחסד: מקווה, בית מדרש, חדרי לינה ומקום להתוועד יחד בסעודה כיד המלך.</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- COUNTDOWN -->
+<div class="count">
+  <div class="wrap cgrid">
+    <div><h3>עולו והתכנסו להילולא קדישא</h3><p>הספירה לאחור לימי ההילולא בפשיסחה</p></div>
+    <div class="cd"><h4>הילולת היהודי הקדוש</h4><div class="d">י״ט תשרי · <span id="d1"></span></div><div class="n" id="c1"></div></div>
+    <div class="cd"><h4>הילולת הרבי ר׳ בונים</h4><div class="d">י״ב אלול · <span id="d2"></span></div><div class="n" id="c2"></div></div>
+  </div>
+</div>
+
+<!-- TOUR -->
+<section id="tour">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow">מסלול המבקר</div><h2 class="h2">כך עוברים יום בפשיסחה</h2><p class="lead">הסדר שבו עוברים הבאים להויף, כפי שמתאר אותו גבאי המקום.</p></div>
+    <div class="tour">
+      <div class="step reveal"><img src="img/mikveh4.jpg" alt="" loading="lazy"><div><h4>טבילה במקווה</h4><p>תחילה יורדים לטבול במקווה המהודר שבבניין, להיטהר מאורח הדרך.</p></div></div>
+      <div class="step reveal"><img src="img/ohelprayer.jpg" alt="" loading="lazy"><div><h4>עלייה לציונים</h4><p>משם עולים לציונים הקדושים לשפוך צקון לחש — ולהזכיר את השמות.</p></div></div>
+      <div class="step reveal"><img src="img/shuldaven2.jpg" alt="" loading="lazy"><div><h4>בית הכנסת המיוחס</h4><p>נכנסים להתפלל במקום שהתפללו אבותינו ורבותינו.</p></div></div>
+      <div class="step reveal"><img src="img/shab3.jpg" alt="" loading="lazy"><div><h4>חזרה להויף</h4><p>לפוש קמעא מחולשא דאורחא — ולמלא את הנפש בסעודה ובמנוחה.</p></div></div>
+    </div>
+    <div class="gabbai reveal">״אין דומה קלסתר פניו של אדם שזכה ועלה בידו להתפלל בפשיסחה, לקלסתר פניו שעדיין לא זכה לבוא להתפלל שם.״<small>— הרב אליעזר דוד רובינשטיין, משמש בקודש בעיה״ק פשיסחה · גיליון ״מהנעשה בהיכל ההויף״, אב/אלול תשפ״ה</small></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="svc" id="services">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow">הכנסת אורחים</div><h2 class="h2">בית של תורה וחסד</h2><p class="lead">״בית של תורה וחסד, בית המדרש לתורה ולתפילה, מקווה טהרה מפואר ובכשרות הגבוהה ביותר, ומקום מיוחד להתוועד יחדיו בסעודה כיד המלך״ — כהכנה לעלייה לציון.</p></div>
+    <div class="sgrid">
+      <div class="s w reveal"><img src="img/mikveh1.jpg" alt="" loading="lazy"><span class="chip">מקווה טהרה</span><div class="t"><h3>מקווה טהרה מהודר</h3><p>מקווה מפואר ברוב פאר והדר בבניין הכנסת האורחים, עם חדר הכנה מרווח.</p></div></div>
+      <div class="s reveal"><img src="img/mikveh3.jpg" alt="" loading="lazy"><span class="chip">חדר הכנה</span><div class="t"><h3>חדר הכנה</h3><p>נקי, מואר ומאובזר.</p></div></div>
+      <div class="s h reveal"><img src="img/room1.jpg" alt="" loading="lazy"><span class="chip b">חדרי לינה</span><div class="t"><h3>חדרי לינה</h3><p>חדרים מעוצבים עם מיטות עץ, וילונות, מגבות ומצעים נקיים — מוכנים לכל אורח.</p><div class="beds"><span>חדרי 2 מיטות</span><span>חדרי 4 מיטות</span><span>חדר גדול לקבוצה</span></div></div></div>
+      <div class="s h reveal"><img src="img/room2.jpg" alt="" loading="lazy"><span class="chip b">משפחות וקבוצות</span><div class="t"><h3>לינה לקבוצות</h3><p>חדרים מרווחים עם מיטות עץ קומתיים — לחבורות, לקהילות ולמשפחות.</p></div></div>
+      <div class="s w reveal"><img src="img/hallfull.jpg" alt="" loading="lazy"><span class="chip f">סעודות כיד המלך</span><div class="t"><h3>אולם הסעודות</h3><p>אולם גדול ערוך בשולחנות מפוארים — לשבתות, להילולות ולקבוצות מאורגנות.</p></div></div>
+      <div class="s reveal"><img src="img/daven.jpg" alt="" loading="lazy"><span class="chip g">תפילות יומיות</span><div class="t"><h3>בית המדרש</h3><p>תפילות במניין ולימוד בהיכל בית המדרש שבבניין.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SHABBOS -->
+<section class="shab" id="shabbos">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow" style="color:var(--fire2)">שבת בפשיסחה</div><h2 class="h2">שבת מרוממת בעיר חמדת הלבבות</h2><p class="lead">שולחנות ערוכים, חלות חמות, תפילות בהתעוררות ושולחן טהור — הקבוצות מתקבלות בכבוד מלכים כמיטב המסורת של ״דער ביאלער הויף״.</p></div>
+    <div class="mosaic reveal">
+      <div class="big" style="background-image:url(img/shabtable.jpg)" data-z="shabtable"></div>
+      <div style="background-image:url(img/shabtable3.jpg)" data-z="shabtable3"></div>
+      <div style="background-image:url(img/hall2.jpg)" data-z="hall2"></div>
+      <div style="background-image:url(img/shab2.jpg)" data-z="shab2"></div>
+      <div style="background-image:url(img/hall3.jpg)" data-z="hall3"></div>
+    </div>
+    <div class="shab-row">
+      <div class="vid reveal"><video src="vid/tish.mp4" poster="img/poster_tish.jpg" controls playsinline preload="none"></video></div>
+      <div class="reveal"><h3 style="font-size:30px;color:var(--gold2)">רוצים לעשות שבת בפשיסחה?</h3><p style="color:#dccbb0">לינה, סעודות שבת, מקווה בערב שבת ותפילות בבית המדרש. קבוצות וחבורות מוזמנות לתאם מראש — המקום מוגבל.</p><a class="btn btn-fire" href="#book" data-tab="shabbos">לתיאום שבת ←</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- REBBE -->
+<section class="rebbe" id="rebbe">
+  <div class="wrap rgrid">
+    <div class="rphotos reveal">
+      <div style="background-image:url(img/reb3.jpg)" data-z="reb3"></div>
+      <div style="background-image:url(img/reb4.jpg)" data-z="reb4"></div>
+      <div style="background-image:url(img/reb2.jpg)" data-z="reb2"></div>
+    </div>
+    <div class="reveal">
+      <div class="eyebrow">בנשיאות כ״ק מרן אדמו״ר שליט״א</div>
+      <h2 class="h2">ממשיכים את הלהבה של פשיסחה</h2>
+      <p class="lead">האגודה ׳דער ביאלה הויף׳ נוסדה ע״י כ״ק מרן אדמו״ר מביאלה שליט״א, נצר לבית פשיסחה, לפעילות אינטנסיבית למען הציון הקדוש ולקדשי בית פשיסחה.</p>
+      <div class="facts">
+        <div><i>📜</i><p style="margin:0"><b>ספר תורה בציון בעת צרה</b><span>מנהג קודש של רבינו בעל ה׳להבת דוד׳ זי״ע, ובנו כ״ק מרן אדמו״ר שליט״א נוהג אחת בשנה לעלות ולהעתיר בציון עם מניין וספר תורה בחיקו, לביטול גזירות מעל כלל ישראל.</span></p></div>
+        <div><i>✍️</i><p style="margin:0"><b>הכנסת ספר תורה להויף</b><span>מעמד כתיבת אותיות וסיום ספר תורה שנכנס ברוב פאר להיכל ׳דער ביאלה הויף׳, בתהלוכת לפידים ברחובות פשיסחה.</span></p></div>
+        <div><i>🕯️</i><p style="margin:0"><b>המסע השנתי</b><span>הנסיעה השנתית לפשיסחה חודשה ע״י רבינו בעל ה׳להבת דוד׳ מביאלה זי״ע, וממשיכה עד היום.</span></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TALES -->
+<section class="tales has-bgs" id="tales">
+  <div class="bgs" data-slides="aron,bimah,oldgate,oldmarket" style="--ov:rgba(43,8,16,.86)"></div>
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow" style="color:var(--fire2)">סיפורים מבית פשיסחה</div><h2 class="h2">מעשי צדיקים וקורות המקום</h2><p class="lead">מתוך גיליונות ״מהנעשה בהיכל ההויף״ וספרי בית פשיסחה. לחצו על סיפור לקריאה מלאה.</p></div>
+    <div class="tgrid" id="tgrid"></div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section id="videos" style="background:var(--parch2)">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow">מן המעמדים</div><h2 class="h2">רגעים מפשיסחה</h2></div>
+    <div class="vgrid">
+      <div class="vc reveal"><video src="vid/torch.mp4" poster="img/poster_torch.jpg" controls playsinline preload="none"></video><p>תהלוכת הלפידים — הכנסת ספר תורה, אדר תשפ״ה</p></div>
+      <div class="vc reveal"><video src="vid/torch2.mp4" poster="img/poster_torch2.jpg" controls playsinline preload="none"></video><p>החופה ברחובות פשיסחה</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE + NEWS -->
+<section id="history" class="has-bgs" style="color:#fff">
+  <div class="bgs" data-slides="old1,old5,oldentry"></div>
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow" style="color:var(--fire2)">קורות המקום</div><h2 class="h2" style="color:#fff">מגל הלהבה ועד היום</h2><p class="lead" style="color:#e8dac3">גוללים הצידה ←</p></div>
+    <div class="tl" id="tl"></div>
+    <div class="tl-nav"><button id="tl-r" aria-label="הקודם">›</button><button id="tl-l" aria-label="הבא">‹</button></div>
+  </div>
+</section>
+
+
+<section class="shoah" id="shoah">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow" style="color:#c9c1b4">יזכור</div><h2 class="h2">פשיסחה בשואה</h2><p class="lead" style="color:#bdb5a8">העיירה שבה הודלקה הלהבה — ושבה נכרתה קהילה שלמה. ואף על פי כן: הלהבה לא כבתה.</p></div>
+    <div class="stat-row reveal">
+      <div class="stat"><b>65%</b><span>מתושבי העיר היו יהודים בשנת 1820</span></div>
+      <div class="stat"><b>~2,500</b><span>יהודים בפשיסחה ערב המלחמה</span></div>
+      <div class="stat"><b>~4,000</b><span>יהודי פשיסחה והסביבה גורשו לטרבלינקה</span></div>
+      <div class="stat"><b dir="ltr">10–30</b><span>בלבד שרדו את השואה</span></div>
+    </div>
+    <div class="sgrid2">
+      <div class="reveal">
+        <p>ערב מלחמת העולם השנייה עמדו בראש הקהילה ר׳ יוסף מייזלס, ורב העיר היה הרב אלחנן פוקס. בשנת 1942 הקימו הגרמנים בעיר גטו, ורוכזו בו יהודי פשיסחה ויהודים מהעיירות הסמוכות — אלפי נפשות בצפיפות נוראה.</p>
+        <p>בחודש חשוון תש״ג (27–31 באוקטובר 1942) חוסל הגטו: הגרמנים כיתרו את הרובע וציוו על כולם להתייצב בנקודות האיסוף. מי שנשאר בביתו נורה במקום. השאר הובלו ברגל ובעגלות לאופוצ׳נו, ומשם בקרונות אל מחנה ההשמדה טרבלינקה.</p>
+        <p>חברי היודנראט ויהודים שנורו בחצר בית הקהילה נקברו בקברי אחים בבית הקברות היהודי — אותו בית קברות שבו נמצא ציון היהודי הקדוש. לאחר המלחמה לא חודשה הקהילה היהודית בפשיסחה, והבית הקדוש עמד בשממונו עשרות שנים.</p>
+        <div class="candle"><i>🕯️</i><div><b style="font-family:var(--serif);font-size:19px;color:#fff">״להבה הודלקה בפשיסחה ושוב לא כבתה לעולם״</b><div style="font-size:14.5px;color:#bdb5a8">היום, בהכנסת האורחים שלצד בית הכנסת העתיק ובית החיים, חוזר קול תורה ותפילה לפשיסחה.</div></div></div>
+        <div class="srcs">מקורות: Encyclopaedia Judaica (ערך Przysucha); ESJF — סקר בית הקברות היהודי בפשיסחה; zabytek.pl — המכון הלאומי למורשת פולין; המכלול (ערך פשיסחה).</div>
+      </div>
+      <div class="bw reveal">
+        <div style="background-image:url(img/war2.jpg)" data-z="war2"></div>
+        <div style="background-image:url(img/war1.jpg)" data-z="war1"></div>
+        <div style="background-image:url(img/nazis.jpg)" data-z="nazis"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="routes" id="routes">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow" style="color:var(--fire2)">מסלול ציוני פולין</div><h2 class="h2">כמה זמן מפשיסחה אל…</h2><p class="lead" style="color:#cfe0e6">פשיסחה נמצאת בלב מסלול הציונים. לחצו על נקודה במפה או על כרטיס — ותקבלו ניווט ישיר מההויף.</p></div>
+    <div class="rwrap" style="grid-template-columns:1fr">
+      <div class="map reveal" id="map"></div>
+      <div class="rlist reveal" id="rlist"></div>
+      <div class="tl-nav"><button id="rl-r" aria-label="הקודם">›</button><button id="rl-l" aria-label="הבא">‹</button></div>
+    </div>
+    <p style="font-size:13px;color:#a9c3cc;margin-top:14px">המרחקים וזמני הנסיעה משוערים (ברכב, בתנאי דרך רגילים). לזמן מדויק — לחצו ״ניווט״.</p>
+  </div>
+</section>
+
+<section id="news" style="background:var(--parch2)">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow">מהנעשה בהיכל ההויף</div><h2 class="h2">עדכונים אחרונים</h2></div>
+    <div class="ngrid" id="ngrid"></div>
+  </div>
+</section>
+
+<section id="shul" style="background:#1b0609;color:#fff">
+  <div class="wrap rgrid">
+    <div class="reveal"><div class="eyebrow" style="color:var(--fire2)">בית הכנסת המיוחס</div><h2 class="h2" style="color:#fff">״קדושתה חוזרת וננערת בימים אלו״</h2><p class="lead" style="color:#dccbb0">בית הכנסת העתיק בפשיסחה, שאלפי חסידים ואנשי מעשה באו להתפלל בתוכו — אחרי עשרות שנות שממה החלה מלאכת הקודש של שיפוצו מחדש.</p><a class="btn btn-gold" href="#partner" style="margin-top:18px">טלו חלק בשיקום ←</a></div>
+    <div class="rphotos reveal">
+      <div style="background-image:url(img/shuldark2.jpg)" data-z="shuldark2"></div>
+      <div style="background-image:url(img/shul_int.jpg)" data-z="shul_int"></div>
+      <div style="background-image:url(img/shuldaven3.jpg)" data-z="shuldaven3"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ZMANIM -->
+<section id="zmanim">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow">זמני היום</div><h2 class="h2">זמני היום בפשיסחה</h2>
+      <div class="daypick"><span class="hebdate" id="z-heb"></span><input type="date" id="z-date" aria-label="בחירת תאריך"><span style="color:var(--muted);font-size:14.5px">בחרו תאריך לתכנון הנסיעה</span></div></div>
+    <div class="zm" id="zm"></div>
+    <p style="font-size:13.5px;color:var(--muted);margin-top:12px">חישוב אוטומטי לפי מיקום פשיסחה ושעון פולין — לתכנון בלבד. לזמני הלכה למעשה יש לעיין בלוח מוסמך.</p>
+  </div>
+</section>
+
+<!-- FORMS -->
+<section class="forms" id="book">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow">הזמנות ופניות</div><h2 class="h2">מתכננים להגיע?</h2><p class="lead">ממלאים — וצוות ההויף חוזר אליכם לתיאום.</p></div>
+    <div class="tabs" id="ftabs">
+      <button class="on" data-p="stay">🛏️ לינה וסעודות</button>
+      <button data-p="shabbos">🕯️ שבת בפשיסחה</button>
+      <button data-p="kvitel">📜 שמות לציון</button>
+      <button data-p="guest">🤝 הכנס אורח</button>
+    </div>
+    <div class="panel on" id="p-stay">
+      <div class="side" style="background-image:url(img/stayfeast.jpg)"><div><h3>לינה וסעודות</h3><p>חדרים בבניין הכנסת האורחים, סעודות ומקווה — סמוך ונראה לאוהל הקדוש.</p></div></div>
+      <form data-kind="stay">
+        <label>שם מלא<input name="שם" required></label><label>טלפון<input name="טלפון" type="tel" required></label>
+        <label class="full">אימייל<input name="אימייל" type="email"></label>
+        <label>תאריך הגעה<input name="הגעה" type="date" required></label>
+        <label>מספר לילות<select name="לילות"><option>ללא לינה</option><option selected>1</option><option>2</option><option>3</option><option>4+</option></select></label>
+        <label>מספר אורחים<input name="אורחים" type="number" min="1" value="1"></label>
+        <label>סוג<select name="סוג"><option>יחיד / משפחה</option><option>קבוצה מאורגנת</option><option>חצר / קהילה</option></select></label>
+        <div class="full"><div style="font-size:14.5px;color:var(--muted);margin-bottom:8px">מה תצטרכו?</div><div class="chips">
+          <label><input type="checkbox" name="שירות" value="לינה" checked><span>לינה</span></label>
+          <label><input type="checkbox" name="שירות" value="ארוחות"><span>ארוחות</span></label>
+          <label><input type="checkbox" name="שירות" value="מקווה"><span>מקווה</span></label>
+          <label><input type="checkbox" name="שירות" value="עזרה בהסעה"><span>עזרה בהסעה</span></label></div></div>
+        <label class="full">הערות<textarea name="הערות" placeholder="שעת נחיתה, צרכים מיוחדים, ציונים נוספים במסלול..."></textarea></label>
+        <div class="full"><button class="btn btn-wine" type="submit">שליחת בקשה ←</button></div><div class="result"></div>
+      </form>
+    </div>
+    <div class="panel" id="p-shabbos">
+      <div class="side" style="background-image:url(img/formshab.jpg)"><div><h3>שבת בפשיסחה</h3><p>סעודות שבת, תפילות ולינה בצל הקודש.</p></div></div>
+      <form data-kind="shabbos">
+        <label>שם מלא<input name="שם" required></label><label>טלפון<input name="טלפון" type="tel" required></label>
+        <label class="full">אימייל<input name="אימייל" type="email"></label>
+        <label>תאריך השבת<input name="שבת" type="date" required></label>
+        <label>מספר משתתפים<input name="משתתפים" type="number" min="1" value="1"></label>
+        <div class="full"><div class="chips">
+          <label><input type="checkbox" name="כולל" value="לינה" checked><span>לינה</span></label>
+          <label><input type="checkbox" name="כולל" value="סעודות שבת" checked><span>סעודות שבת</span></label>
+          <label><input type="checkbox" name="כולל" value="מקווה בערב שבת"><span>מקווה בערב שבת</span></label>
+          <label><input type="checkbox" name="כולל" value="קבוצה מאורגנת"><span>אנחנו קבוצה</span></label></div></div>
+        <label class="full">הערות<textarea name="הערות"></textarea></label>
+        <div class="full"><button class="btn btn-wine" type="submit">שליחת בקשה לשבת ←</button></div><div class="result"></div>
+      </form>
+    </div>
+    <div class="panel" id="p-kvitel">
+      <div class="side" style="background-image:url(img/formkv.jpg)"><div><h3>שמות לתפילה בציון</h3><p>השמות יוזכרו בתפילה על ציון היהודי הקדוש ורבי שמחה בונים זי״ע.</p></div></div>
+      <form data-kind="kvitel">
+        <div class="full names" id="names"><div style="font-size:14.5px;color:var(--muted)">שמות להזכרה (שם + שם האם)</div></div>
+        <button type="button" class="addn full" id="addn">+ הוספת שם</button>
+        <div class="full"><div class="chips">
+          <label><input type="checkbox" name="בקשה" value="רפואה שלמה"><span>רפואה שלמה</span></label>
+          <label><input type="checkbox" name="בקשה" value="זיווג הגון"><span>זיווג הגון</span></label>
+          <label><input type="checkbox" name="בקשה" value="זרע של קיימא"><span>זרע של קיימא</span></label>
+          <label><input type="checkbox" name="בקשה" value="פרנסה"><span>פרנסה</span></label>
+          <label><input type="checkbox" name="בקשה" value="יראת שמים"><span>יראת שמים</span></label>
+          <label><input type="checkbox" name="בקשה" value="ישועה"><span>ישועה</span></label></div></div>
+        <label>שם השולח<input name="שם השולח" required></label><label>טלפון<input name="טלפון" type="tel"></label>
+        <label class="full">בקשה אישית (לא חובה)<textarea name="בקשה אישית"></textarea></label>
+        <div class="full"><button class="btn btn-wine" type="submit">שליחת השמות ←</button></div><div class="result"></div>
+      </form>
+    </div>
+    <div class="panel" id="p-guest">
+      <div class="side" style="background-image:url(img/formguest.jpg)"><div><h3>הכנס אורח</h3><p>זכו במצוות הכנסת אורחים מרחוק: ממנים סעודה או שבת לאורחי רבינו בפשיסחה.</p></div></div>
+      <form data-kind="guest">
+        <label class="full">מה תרצו לממן?<select name="מימון"><option>סעודה לאורחים</option><option>שבת לאורחים</option><option>לינה לאורח</option><option>יום הילולא</option></select></label>
+        <label>שם מלא<input name="שם" required></label><label>טלפון<input name="טלפון" type="tel" required></label>
+        <label class="full">לעילוי נשמת / לזכות<textarea name="לזכות"></textarea></label>
+        <div class="full"><button class="btn btn-wine" type="submit">שליחה ←</button></div><div class="result"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNER -->
+<section class="partner has-bgs" id="partner">
+  <div class="bgs" data-slides="meal2,food2,meal3,buffet" style="--ov:rgba(60,8,20,.84)"></div>
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--fire2)">• סעדוני ואושעה •</div>
+    <h2 class="h2">שותפות קבועה עם אורחי רבינו</h2>
+    <div class="pgrid">
+      <div><p class="lead" style="color:#e5d6bd">״אל כלל ידידי בית רבינו הקדוש — לאחר מאמצים מרובים והוצאות תרתי משמע, צלח בידנו לסדר לכלל העולים מתוך נוחיות המרבית... והיות וכידוע הוצאות מרובות מאד, באנו בבקשה: טלו חלק ונחלה להחיות נפש כל חי — ברווח ובכשרות בתוך השממה הפולנית, למען אלפי העולים.״</p>
+        <p style="color:var(--gold2);font-family:var(--serif);font-size:21px;margin-top:16px">״רבינו הק׳ זיע״א לא נשאר חייב לאלו אשר יפעלו לשמו ולזכרו!״</p></div>
+      <div>
+        <div class="pcards">
+          <div class="pc" data-p="שותפות חודשית קבועה"><i>🔥</i><b>שותפות חודשית</b><span>הוראת קבע לאחזקת ההויף</span></div>
+          <div class="pc" data-p="מימון סעודה לאורחים"><i>🍽️</i><b>סעודה לאורחים</b><span>סעודה כיד המלך לעולים</span></div>
+          <div class="pc" data-p="שיקום בית הכנסת המיוחס"><i>🕍</i><b>בית הכנסת המיוחס</b><span>שותפות בשיקום</span></div>
+          <div class="pc" data-p="שמירת בית החיים"><i>🛡️</i><b>שמירת בית החיים</b><span>גדר, מצלמות והחזרת מצבות</span></div>
+        </div>
+        <div class="donate" id="donate">
+          <h3>💝 איך תורמים?</h3>
+          <a class="kbtn" href="https://ultra.kesherhk.info/external/categoryPage/610?moked=kehilot-site" target="_blank" rel="noopener"><span>💳</span><div><b>לתרומה מאובטחת בקהילות ←</b><small>קופת ״הכנסת אורחים ביאלה הויף פשיסחה״ · קוד קופה 64553</small></div></a>
+          <div class="dways">
+            <a href="tel:+97232757000"><i>☎️</i><b>קו הצדקה של קהילות</b><span>073-275-7000 · קוד קופה 64553</span></a>
+            <a href="tel:+97236196555"><i>📞</i><b>במשרד</b><span>‎+972-3-619-6555 שלוחה 6</span></a>
+            <a href="mailto:taferet2021@gmail.com?subject=%D7%AA%D7%A8%D7%95%D7%9E%D7%94%20%D7%9C%D7%94%D7%9B%D7%A0%D7%A1%D7%AA%20%D7%90%D7%95%D7%A8%D7%97%D7%99%D7%9D%20%D7%A4%D7%A9%D7%99%D7%A1%D7%97%D7%94"><i>✉️</i><b>במייל</b><span>taferet2021@gmail.com — לתרומות ולהנצחות</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gal" id="gallery">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--fire2)">גלריה</div><h2 class="h2">פשיסחה בתמונות</h2>
+    <div class="gfilter" id="gf"></div>
+    <div class="masonry" id="gm"></div>
+  </div>
+</section>
+
+<!-- GUIDE -->
+<section id="guide">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow">מדריך למבקר</div><h2 class="h2">לפני שיוצאים לדרך</h2></div>
+    <div class="ggrid">
+      <div class="g reveal"><div class="i">✈️</div><h4>איך מגיעים</h4><p>פשיסחה (Przysucha) שוכנת כ־100 ק״מ דרומית לוורשה — כשעה וחצי נסיעה משדה התעופה. ההויף נמצא במרכז העיר, סמוך לבית הכנסת המיוחס ולבית החיים.</p><div class="ctas" style="margin-top:12px"><a class="btn btn-line" href="https://waze.com/ul?ll=51.3577,20.6299&navigate=yes" target="_blank" rel="noopener">Waze</a><a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=Przysucha%2C+Poland" target="_blank" rel="noopener">Google Maps</a></div></div>
+      <div class="g reveal"><div class="i">🧳</div><h4>טיפים לנסיעה</h4><ul><li>תאמו לינה וסעודות מראש, במיוחד בשבתות ובימי הילולא</li><li>שלחו מראש שמות לציון — ותזכו להזכרה גם אם לא תגיעו</li><li>בחורף: לבוש חם, הימים קצרים — בדקו את זמני השקיעה</li></ul></div>
+      <div class="g reveal"><div class="i">🗺️</div><h4>מסלול ציוני פולין</h4><p>פשיסחה היא תחנה מרכזית בדרך לציונים נוספים — ראדושיץ, ראדומסק, לעלוב, לובלין, קוזניץ, גור ועוד.</p><a class="btn btn-line" href="#routes" style="margin-top:10px">למפת הציונים וזמני הנסיעה ←</a></div>
+    </div>
+    <div class="faq reveal">
+      <details><summary>האם ההויף פתוח כל השנה?</summary><p>בנין הכנסת האורחים משרת את העולים לציון במהלך השנה, ובמיוחד בשבתות, בימי בין הזמנים ובימי ההילולא. מומלץ לתאם מראש.</p></details>
+      <details><summary>האם אפשר להגיע כקבוצה?</summary><p>בהחלט — קבוצות, חצרות וקהילות מתקבלות בכבוד. תאמו מראש כדי שנוכל להיערך לסעודות וללינה.</p></details>
+      <details><summary>איך שולחים שמות לציון?</summary><p>בטופס ״שמות לציון״ באתר, או דרך גבאי האגודה בטלפון.</p></details>
+      <details><summary>איך תורמים?</summary><p>בלחיצה על כפתור ״תרומה״ באתר — דרך מערכת קהילות (קוד קופה 64553), בקו הצדקה 073-275-7000, בטלפון ‎+972-3-619-6555 שלוחה 6, או במייל taferet2021@gmail.com.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact" style="background-image:url(img/torchnight.jpg)">
+  <div class="wrap">
+    <h2>בואו לפשיסחה</h2>
+    <p>לתיאום ביקור, לינה, שבתות, קבוצות, שמות לציון ותרומות — צוות ׳דער ביאלה הויף׳ לשירותכם.</p>
+    <div class="ctas" style="justify-content:center"><a class="btn btn-fire" href="#book">להזמנה ←</a><a class="btn btn-ghost" href="#book" data-tab="kvitel">שמות לציון</a></div>
+    <div class="cinfo">
+      <a href="tel:+972586866010"><small>האחראי — נייד בישראל</small><b>‎+972-58-686-6010</b></a>
+      <a href="tel:+97236196555"><small>משרד בישראל (שלוחה 6)</small><b>‎+972-3-619-6555</b></a>
+      <a href="tel:+48607777870"><small>אחראי הכנסת אורחים בפשיסחה</small><b>‎+48-607-777-870</b></a>
+      <a href="tel:+48518582524"><small>פתיחת האוהל הקדוש</small><b>‎+48-518-582-524</b></a>
+      <a href="mailto:taferet2021@gmail.com"><small>אימייל</small><b>taferet2021@gmail.com</b></a>
+      <div><small>גבאי ומשמש בקודש</small><b>הרב אליעזר דוד רובינשטיין</b></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div><h5>דער ביאלה הויף · פשיסחה</h5><p>הכנסת אורחים ומרכז לתורה, תפילה וחסד בצל רשכבה״ג היהודי הקדוש מפשיסחה זיע״א. שע״י מרכז מוסדות ביאלה ב״ב, מיסודו ובנשיאות כ״ק מרן אדמו״ר שליט״א.</p></div>
+      <div><h5>ניווט</h5><ul><li><a href="#houses">הבתים</a></li><li><a href="#services">הכנסת אורחים</a></li><li><a href="#shabbos">שבת בפשיסחה</a></li><li><a href="#tales">סיפורים</a></li><li><a href="#gallery">גלריה</a></li></ul></div>
+      <div><h5>פעולות</h5><ul><li><a href="#book">הזמנת לינה</a></li><li><a href="#book" data-tab="kvitel">שמות לציון</a></li><li><a href="#partner">שותפות</a></li><li><a href="#zmanim">זמני היום</a></li><li><a href="#contact">צור קשר</a></li></ul></div>
+    </div>
+    <div class="copy"><span>© דער ביאלה הויף · פשיסחה</span><span>״להבה הודלקה בפשיסחה ושוב לא כבתה לעולם״</span></div>
+  </div>
+</footer>
+
+<div class="fab"><a class="k" href="#book" data-tab="kvitel" title="שמות לציון">📜</a><a class="p" href="tel:+972586866010" title="חייגו לאחראי">📞</a></div>
+<div class="toast" id="toast"></div>
+<div class="ov lb" id="lb"><button class="x" aria-label="סגור">✕</button><button class="pv">›</button><img alt=""><p></p><button class="nx">‹</button></div>
+<div class="ov" id="cp"><button class="x" aria-label="סגור">✕</button><div class="cpbox"><div id="cp-i" style="font-size:44px"></div><div id="cp-t" style="color:#8a6d5a"></div><div id="cp-v" dir="ltr" style="font-size:30px;font-weight:800;margin:6px 0 16px;color:#2b0810;word-break:break-all"></div><div id="cp-a" style="display:flex;flex-direction:column;gap:10px"></div><button class="btn btn-line" id="cp-c" style="margin-top:10px;width:100%">📋 העתקה</button></div></div>
+<div class="ov" id="sv"><button class="x" aria-label="סגור">✕</button><div class="sv"><div class="bars" id="sv-bars"></div><div class="hd"><img id="sv-av" alt=""><span id="sv-t"></span></div><div class="blur" id="sv-blur"></div><div class="pic" id="sv-pic"></div><div class="cap"><h4 id="sv-h"></h4><p id="sv-p"></p></div><div class="tap r" id="sv-prev"></div><div class="tap l" id="sv-next"></div></div></div>
+<div class="ov tale-ov" id="tov"><button class="x" aria-label="סגור">✕</button><div class="box"><h3 id="tov-h"></h3><div class="body" id="tov-b"></div><div class="src" id="tov-s"></div></div></div>
+<div class="ov" id="dm"><button class="x" aria-label="סגור">✕</button><div style="background:var(--white);border-radius:20px;width:min(540px,94vw);max-height:90vh;overflow:auto"><div style="background:var(--wine);color:#fff;padding:20px 26px"><div style="color:var(--gold2);font-size:14px">שותפות עם אורחי רבינו</div><h3 id="dm-t" style="font-size:26px"></h3></div><form data-kind="ded" style="grid-template-columns:1fr"><input type="hidden" name="שותפות" id="dm-n"><label>סכום (לא חובה)<input name="סכום" type="text" placeholder="לדוגמה: 180 ₪ לחודש"></label><label>שם מלא<input name="שם" required></label><label>טלפון<input name="טלפון" type="tel" required></label><label>לעילוי נשמת / לזכות<textarea name="לזכות"></textarea></label><div><button class="btn btn-fire" type="submit">שליחה ←</button></div><div class="result"></div></form></div></div>
+
+<script>
+var EMAIL='taferet2021@gmail.com';
+var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+function toast(t){var e=$('#toast');e.textContent=t;e.classList.add('on');clearTimeout(e._t);e._t=setTimeout(function(){e.classList.remove('on')},2600)}
+$('#burger').onclick=function(){$('#menu').classList.toggle('open')};
+$$('#menu a').forEach(function(a){a.onclick=function(){$('#menu').classList.remove('open')}});
+(function(){var s=$$('#slides div'),i=0;s[0].classList.add('on');setInterval(function(){s[i].classList.remove('on');i=(i+1)%s.length;s[i].classList.add('on')},6000)})();
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+function obs(){ $$('.reveal:not(.in)').forEach(function(el){io.observe(el)}) }
+
+/* ---------- STORIES (circles) ---------- */
+var ST=[
+ {t:'ציון הקודש',av:'ohel1',s:[['ohel1','היכל ציון הקודש','האוהל על ציון היהודי הקדוש ורבי שמחה בונים זי״ע.'],['ohelin','בתוך האוהל','מקום שרבים נושעו בו בכל הישועות.'],['ohelgroup','עלייה לציון','קהל גדול פוקד את האי אתרא קדישא.']]},
+ {t:'הכנסת אורחים',av:'tablelux',s:[['tablelux','שולחן ערוך','סעודות כיד המלך לכל העולים.'],['foodlux','מנה חמה','אוכל טרי ומשובח, מוגש בהידור.'],['fruit','מגשי פירות','כיבוד עשיר לאורחים.'],['plates','מנות ערוכות','מוכנים לקבלת הקבוצות.']]},
+ {t:'שבת',av:'shabhall',s:[['shabhall','האולם ערוך לשבת','עשרות שולחנות ערוכים במפות לבנות — מוכנים לשבת קודש.'],['shabtable2','שבת בפשיסחה','שולחנות ערוכים לשבת קודש.'],['shabmeal','סעודת שבת','קהילות וחבורות סביב שולחן אחד.'],['challah','חלות שבת','חלות טריות לכל אורח.']]},
+ {t:'מקווה',av:'mikvehA',s:[['mikvehA','מקווה טהרה','מקווה מהודר ברוב פאר והדר.'],['mikvehB','חדר ההכנה','נקי ומאובזר — הכנה לפני העלייה לציון.']]},
+ {t:'חדרים',av:'room1',s:[['room1','חדר זוגי','חדר נעים עם שתי מיטות, וילונות ושידה.'],['room2','חדר לקבוצה','מיטות עץ קומתיים — כל החדר מסודר ומוכן.'],['room3','חדרי לינה','מיטות עץ, וילונות ומצעים נקיים.'],['room4','מוכן לאורח','מגבת, מצעים וכיבוד על כל מיטה.']]},
+ {t:'האדמו״ר',av:'reb7',s:[['reb7','כתיבת אותיות','בהכנסת ספר התורה להויף.'],['reb1','מעמד הסיום','בהיכל דער ביאלה הויף.'],['reb5','בפשיסחה','מסירות לבית פשיסחה.'],['rebmeal','בהויף','עם החסידים והאורחים.']]},
+ {t:'ספר תורה',av:'torahchupa',s:[['torahchupa','הכנסת ספר תורה','תחת החופה ולאור הלפידים ברחובות פשיסחה.'],['torahscroll','סיום הכתיבה','שמחה של מצווה סביב הספר.'],['torahcrowd','קהל רב','חסידים ואורחים במעמד.']]},
+ {t:'בית הכנסת',av:'shuldaven',s:[['shuldaven','תפילה בבית הכנסת','מתפללים שוב במקום שהתפללו רבותינו.'],['shuldark','מבפנים','קדושתה חוזרת וננערת.'],['shuldark3','בין העמודים','בית הכנסת המיוחס מן העתיקים בפולין.']]},
+ {t:'נוף פשיסחה',av:'walk',s:[['walk','בשביל האגם','האדמו״ר יחד עם החסידים בשביל האגם.'],['lake4','שפת האגם','התבודדות ותפילה בטבע.'],['lakewalk','הליכת בוקר','פשיסחה הירוקה.'],['river','הנחל','פשיסחה הירוקה.']]},
+ {t:'פשיסחה של פעם',av:'old2',s:[['old2','רחוב בפשיסחה','חיי קהילה תוססים.'],['old6','העיר מלמעלה','פשיסחה של פעם.'],['old3','פשיסחה של פעם','לפני המלחמה.']]}
+];
+$('#stories').innerHTML=ST.map(function(s,i){return '<button class="st" data-i="'+i+'"><span class="ring"><img src="img/'+s.av+'.jpg" alt=""></span><span>'+s.t+'</span></button>'}).join('');
+var sv={i:0,j:0,t:null,start:0,dur:4500};
+function svShow(){var s=ST[sv.i],f=s.s[sv.j];$('#sv-pic').style.backgroundImage=$('#sv-blur').style.backgroundImage='url(img/'+f[0]+'.jpg)';$('#sv-h').textContent=f[1];$('#sv-p').textContent=f[2];$('#sv-t').textContent=s.t;$('#sv-av').src='img/'+s.av+'.jpg';
+  $('#sv-bars').innerHTML=s.s.map(function(_,k){return '<i><b style="width:'+(k<sv.j?100:0)+'%"></b></i>'}).join('');
+  var bar=$$('#sv-bars b')[sv.j];bar.style.transition='none';bar.style.width='0';requestAnimationFrame(function(){requestAnimationFrame(function(){bar.style.transition='width '+sv.dur+'ms linear';bar.style.width='100%'})});
+  clearTimeout(sv.t);sv.t=setTimeout(svNext,sv.dur)}
+function svNext(){var s=ST[sv.i];if(sv.j<s.s.length-1){sv.j++}else if(sv.i<ST.length-1){$$('.st')[sv.i].classList.add('seen');sv.i++;sv.j=0}else{svClose();return}svShow()}
+function svPrev(){if(sv.j>0)sv.j--;else if(sv.i>0){sv.i--;sv.j=0}svShow()}
+function svClose(){clearTimeout(sv.t);$$('.st')[sv.i].classList.add('seen');$('#sv').classList.remove('on')}
+$('#stories').onclick=function(e){var b=e.target.closest('.st');if(!b)return;sv.i=+b.dataset.i;sv.j=0;$('#sv').classList.add('on');svShow()};
+$('#sv-next').onclick=svNext;$('#sv-prev').onclick=svPrev;$('#sv .x').onclick=svClose;
+
+/* ---------- hebrew date + countdown ---------- */
+var TZ='Europe/Warsaw';
+function hebParts(d){try{var o={};new Intl.DateTimeFormat('he-IL-u-ca-hebrew',{day:'numeric',month:'long',year:'numeric',timeZone:TZ}).formatToParts(d).forEach(function(x){o[x.type]=x.value});return o}catch(e){return null}}
+var GEM=['','א','ב','ג','ד','ה','ו','ז','ח','ט','י','יא','יב','יג','יד','טו','טז','יז','יח','יט','כ','כא','כב','כג','כד','כה','כו','כז','כח','כט','ל'];
+function hebDay(n){var g=GEM[+n]||n;return g.length>1?g.slice(0,-1)+'״'+g.slice(-1):g+'׳'}
+function hebStr(d){var o=hebParts(d);return o?hebDay(o.day)+' '+o.month:''}
+function nextHeb(m,day){var d=new Date();d.setHours(12,0,0,0);for(var k=0;k<400;k++){var o=hebParts(d);if(o&&o.month===m&&+o.day===day)return new Date(d);d.setDate(d.getDate()+1)}return null}
+function gdate(d){return d.toLocaleDateString('he-IL',{day:'numeric',month:'long',year:'numeric'})}
+function countdown(t,el){function draw(){var ms=new Date(t).setHours(0,0,0,0)-new Date();if(ms<0){el.innerHTML='<div style="flex:1;padding:10px"><b style="font-size:20px">היום יומא דהילולא</b></div>';return}
+  el.innerHTML='<div><b>'+Math.floor(ms/864e5)+'</b><small>ימים</small></div><div><b>'+Math.floor(ms%864e5/36e5)+'</b><small>שעות</small></div><div><b>'+Math.floor(ms%36e5/6e4)+'</b><small>דקות</small></div>'}draw();setInterval(draw,30000)}
+var h1=nextHeb('תשרי',19),h2=nextHeb('אלול',12);
+if(h1){$('#d1').textContent=gdate(h1);countdown(h1,$('#c1'))}if(h2){$('#d2').textContent=gdate(h2);countdown(h2,$('#c2'))}
+
+/* ---------- zmanim ---------- */
+var LAT=51.3577,LON=20.6299;
+function sunTime(date,zen,rising){var rad=Math.PI/180,N=Math.floor((Date.UTC(date.getFullYear(),date.getMonth(),date.getDate())-Date.UTC(date.getFullYear(),0,0))/864e5),lh=LON/15,t=N+((rising?6:18)-lh)/24,M=.9856*t-3.289,L=(M+1.916*Math.sin(M*rad)+.02*Math.sin(2*M*rad)+282.634+360)%360,RA=(Math.atan(.91764*Math.tan(L*rad))/rad+360)%360;RA=(RA+(Math.floor(L/90)*90-Math.floor(RA/90)*90))/15;var sd=.39782*Math.sin(L*rad),cd=Math.cos(Math.asin(sd)),ch=(Math.cos(zen*rad)-sd*Math.sin(LAT*rad))/(cd*Math.cos(LAT*rad));if(ch>1||ch<-1)return null;var H=(rising?360-Math.acos(ch)/rad:Math.acos(ch)/rad)/15,T=H+RA-.06571*t-6.622,UT=((T-lh)%24+24)%24;return new Date(Date.UTC(date.getFullYear(),date.getMonth(),date.getDate())+UT*36e5)}
+function fmt(d){return d?d.toLocaleTimeString('he-IL',{hour:'2-digit',minute:'2-digit',timeZone:TZ}):'—'}
+function zman(date){var sr=sunTime(date,90.833,true),ss=sunTime(date,90.833,false),sh=(ss-sr)/12;return [['עלות השחר',sunTime(date,106.1,true)],['הנץ החמה',sr],['סוף זמן ק״ש (גר״א)',new Date(+sr+3*sh)],['סוף זמן תפילה (גר״א)',new Date(+sr+4*sh)],['חצות היום',new Date(+sr+6*sh)],['מנחה גדולה',new Date(+sr+6.5*sh)],['שקיעה',ss],['צאת הכוכבים',sunTime(date,98.5,false)]]}
+function drawZ(date){var z=zman(date),now=new Date(),ni=-1;if(date.toDateString()===now.toDateString())for(var i=0;i<z.length;i++)if(z[i][1]&&z[i][1]>now){ni=i;break}
+  $('#zm').innerHTML=z.map(function(x,i){return '<div class="z'+(i===ni?' now':'')+'"><small>'+x[0]+(i===ni?' · הבא בתור':'')+'</small><b>'+fmt(x[1])+'</b></div>'}).join('');
+  $('#z-heb').textContent=hebStr(date)+' · '+date.toLocaleDateString('he-IL',{weekday:'long'})}
+var td=new Date();$('#z-date').value=td.toISOString().slice(0,10);
+$('#z-date').onchange=function(){if(this.value){var p=this.value.split('-');drawZ(new Date(+p[0],p[1]-1,+p[2],12))}};
+drawZ(new Date(td.getFullYear(),td.getMonth(),td.getDate(),12));
+function live(){var n=new Date();$('#l-time').textContent=fmt(n);$('#l-heb').textContent=hebStr(n);$('#l-sunset').textContent=fmt(sunTime(n,90.833,false))}live();setInterval(live,30000);
+
+/* ---------- tales ---------- */
+var TALES=[
+ ['🛡️','הבטחת היהודי הקדוש: ספר תורה על קברו','רבינו רשכבה״ג היהודי הקדוש הבטיח לתלמידיו הקדושים קודם פטירתו, שאם יהיה חלילה עת צרה ליעקב — יאספו עשרה אנשים וילכו על קברו וספר תורה עמהם, ויתפללו שמה, וממנה יוושעו.\n\nבחורף האחרון לימי חייו של הרה״ק ר׳ דוב בער מראדושיץ (הסבא קדישא) זי״ע יצאה גזירה מפעטערבורג שכל אחד מחויב לעמוד על המבחן לעבודת הצבא. הרעיש הסבא קדישא עולמות לבטל הגזירה, ושלח חסיד עם ספר תורה בידו אל ציון היהודי הקדוש בפשיסחה לבקש רחמים.\n\nשאלוהו תלמידיו: הלא הנודע ביהודה אסר זאת, שמא יימצא בספר חסר אפילו אות אחת? השיב להם: ״אני סומך עצמי על פשיטותו של רבינו רשכבה״ג היהודי הקדוש שציווה לעשות כן, יותר מספק וחשש של הנודע ביהודה.״\n\nכך היה מנהג קודש של רבינו בעל ה׳להבת דוד׳ זי״ע: בהגיעו לפשיסחה הוציא מתיקו ספר תורה קטן וצעד לציון, באמירת תהלים בקולות ובבכיות. וכך נוהג בנו, כ״ק מרן אדמו״ר שליט״א.','גיליון ״מהנעשה בהיכל ההויף״, חשוון תשפ״ו'],
+ ['🚶','״עוברי דרכים״ ו״הולכי דרכים״','הרבי ר׳ שמחה בונים זי״ע הלך פעם לטייל מחוץ לעיר, ותלמידו הרה״ק ר׳ מנחם מנדל מקוצק זי״ע הלך עמו. התחיל לרדת גשם שוטף, והתפלל רבינו שיפסיק הגשם.\n\nשאלו תלמידו: הרי אמרו ״ולא תכנס לפניך תפלת עוברי דרכים״?\n\nהשיב לו רבינו: יש הבדל בין ׳עוברי׳ דרכים ל׳הולכי׳ דרכים. ׳עובר דרכים׳ הוא העובר ממקום למקום — הוא אינו צריך כלל לדרך עצמה, ולו היה יכול לפרוח ולהגיע למחוז חפצו, טוב היה לו. לא כן ׳הולך דרכים׳ — זה ההולך בטיול, שהוא צריך לאותה דרך עצמה, וכל פסיעה ופסיעה היא מחוז חפצו. ״וגם אנו הולכי דרכים — ואנחנו בצער.״','גיליון ״מהנעשה בהיכל ההויף״, אב/אלול תשפ״ה'],
+ ['🙏','״וכי מה אעשה כאשר יהודי מבקש ממני ישועה?״','מעשי המופתים של היהודי הקדוש התפרסמו בכל קצוות תבל. וכך אמר לידידו ורעו הרה״ק הסבא משפאלי זי״ע: ״וכי מה אעשה כאשר יהודי מבקש ממני ישועה, הרי איני יכול לסרב...״\n\nועד היום, בכוח סגולותיו, ממשיכים ופועלים ישועות על ציונו למעלה מדרך הטבע — כבחיים חיותו — לאלפי בני ישראל.','גיליון ״מהנעשה בהיכל ההויף״ א׳, אייר תשפ״ה'],
+ ['📖','שיעור שעוטפים בו את הראש במגבת','היהודי הקדוש היה גאון הגאונים, שר התורה והיראה, שכל גולת פולין ותלמידי הבעש״ט ינקו ממקור תורתו. הוא אמר שיעור עיון בנגלה לפני תלמידיו בחריפות עמוקה כל כך, עד שהתלמידים היו מוכרחים לכרוך את ראשם במגבת רטובה.\n\nואמר הרה״ק ר׳ מרדכי מטשרנוביל זי״ע: הגם שבזה העולם הרבי מלובלין עלה ביותר — אך בעולם העליון היהודי עלה ביותר, ושם יושב בראש.','הקדמת כ״ק מרן אדמו״ר מביאלא שליט״א לספר ״קדושת היהודי״'],
+ ['🪨','המצבות חזרו הביתה','משפחה בפשיסחה התגוררה בבית שנבנה מאבני מצבות שנגזלו מבית הקברות היהודי בימי הקומוניזם, ובמשך זמן רב סירבה להשיבן.\n\nעסקני ׳ביאלה הויף׳ פעלו יחד עם פרופ׳ ראדק טצינסקי מהעיר שצ׳צין — שאשתו נצר למשפחת פורמן מפשיסחה — עד שהוכנס לתמונה הקרדינל גז׳גוז׳ ריס, הארכיבישוף של לודז׳. הוא שכנע את המשפחה, לקח על עצמו את כל עלויות הפירוק והבנייה מחדש, ואף הגיע בעצמו לסייע לפועלים להשיב את המצבות למקומן בבית הקברות.','גיליון ״מהנעשה בהיכל ההויף״, אייר תשפ״ה'],
+ ['🔥','שמו — סגולה ליראת שמים','״נאר צו רעדן פון דער הייליגער ׳היהודי הקדוש׳ איז מסוגל ליראת שמים״ — עצם הזכרת שמו של היהודי הקדוש היא סגולה ליראת שמים.\n\nביום י״ט תשרי, ג׳ דחול המועד סוכות תקע״ד, עלה היהודי הקדוש בסערה השמימה. איש לא פילל שהמורה הגדול יילקח במיטב ימיו — ושמו נחקק בדחילו ורחימו: ״היהודי הקדוש״.','החידושי הרי״ם מגור זי״ע · חוברת ״להבה הודלקה בפשיסחה״']
+];
+$('#tgrid').innerHTML=TALES.map(function(t,i){return '<div class="tale reveal" data-i="'+i+'"><div class="ic">'+t[0]+'</div><h4>'+t[1]+'</h4><p>'+t[2].replace(/\n+/g,' ')+'</p><span class="more">לקריאת הסיפור המלא ←</span><span class="src">'+t[3]+'</span></div>'}).join('');
+$('#tgrid').onclick=function(e){var t=e.target.closest('.tale');if(!t)return;var x=TALES[+t.dataset.i];$('#tov-h').textContent=x[0]+' '+x[1];$('#tov-b').textContent=x[2];$('#tov-s').textContent='מקור: '+x[3];$('#tov').classList.add('on')};
+$('#tov .x').onclick=function(){$('#tov').classList.remove('on')};
+
+/* ---------- timeline ---------- */
+var TL=[
+ ['ימי היהודי הקדוש','להבה הודלקה בפשיסחה','בית מדרשו הפך לאבן שואבת לכל דורש ומבקש ה׳, ומשם יצאו חצרות הקודש לכל גולת פולין.','old4'],
+ ['י״ט תשרי תקע״ד','עלה בסערה השמימה','ביום ג׳ דחוה״מ סוכות נסתלק היהודי הקדוש, וציונו בפשיסחה נעשה מוקד עלייה לרגל.','ohel2'],
+ ['אחרי המלחמה','האוהל נבנה מחדש','ע״י כ״ק מרן אדמו״ר מגור בשליחות אדמו״רי פולין ולפי הוראות הגר״ש וואזנר זצ״ל, בהשתדלות העסקנים בן ציון פישהוף, הרה״ח נחמן אלבוים והרה״ח מנחם בוים ז״ל.','oldbm'],
+ ['חידוש המסע','רבינו בעל ה׳להבת דוד׳','חידש את הנסיעה השנתית לפשיסחה, וכ״ק מרן אדמו״ר שליט״א המשיך בדרכו וייסד את האגודה ׳דער ביאלה הויף׳.','reb6'],
+ ['שבט תש״פ','גדר ומצלמות','לאחר חילול הציון ובית הכנסת העתיק — גדר חדשה וגבוהה סביב בית החיים, מרושתת במצלמות אבטחה.','ohelbanner'],
+ ['אדר תשפ״ה','ספר תורה להויף','מעמד הכנסת ספר תורה בתהלוכת לפידים ברחובות פשיסחה להיכל ׳דער ביאלה הויף׳.','reb8'],
+ ['אייר תשפ״ה','המצבות הושבו','המצבות הגזולות הוחזרו לבית הקברות בסיוע פרופ׳ ראדק טצינסקי והקרדינל ריס. ונפתח גיליון ״מהנעשה בהיכל ההויף״.','stones2'],
+ ['אב תשפ״ה','בין הזמנים בפשיסחה','אדמו״רים, רבנים וקבוצות רבות התקבלו בהכנסת אורחים רחבת ידיים, סעודות בשפע ולינה ברמה גבוהה.','shabmeal2'],
+ ['אלול תשפ״ה','השיפוץ בבית הכנסת המיוחס','״זוכים אנו בימים אלו להחל במלאכת הקודש בשיפוץ מחדש את ביהכנ״ס העתיק המיוחס בפשיסחה״.','shul_ext'],
+ ['אלול תשפ״ו','הילולת הרבי ר׳ בונים','ציבור גדול עלה לציון ביומא דהילולא, והתקבל בהויף בסעודות ובלינה.','ohelvisit']
+];
+$('#tl').innerHTML=TL.map(function(t){return '<div class="ti"><div class="c"><img src="img/'+t[3]+'.jpg" alt="" loading="lazy"><div class="tx"><span class="y">'+t[0]+'</span><h4>'+t[1]+'</h4><p>'+t[2]+'</p></div></div></div>'}).join('');
+$('#tl-l').onclick=function(){$('#tl').scrollBy({left:-350,behavior:'smooth'})};$('#tl-r').onclick=function(){$('#tl').scrollBy({left:350,behavior:'smooth'})};
+
+/* ---------- news ---------- */
+var NEWS=[
+ ['shuldaven5','בית הכנסת המיוחס','השיפוץ החל','אחרי עשרות שנים של שממה החלה מלאכת הקודש של שיפוץ בית הכנסת העתיק — ״קדושתה חוזרת וננערת בימים אלו״.'],
+ ['stones1','שמירת בית החיים','המצבות הגזולות חזרו','בשיתוף פרופ׳ ראדק טצינסקי ובסיוע הקרדינל ריס הושבו מצבות שנלקחו לבניית בית פרטי — לבית הקברות העתיק.'],
+ ['guests','הכנסת אורחים','אדמו״רים ורבנים בהויף','בימי בין הזמנים פקדו את המקום אדמו״רים, רבנים ומנהיגי קהילות, והקבוצות התקבלו בכבוד מלכים.'],
+ ['reb9','מעמדים','ספר תורה להיכל ההויף','מעמד סיום כתיבת אותיות והכנסת ספר תורה ברוב פאר להיכל ׳דער ביאלה הויף׳.'],
+ ['ohelminyan','עת צרה','מניין וספר תורה בציון','כפי הוראת היהודי הקדוש ובעקבות הסבא קדישא מראדושיץ — הוקדש סדר תפילה בציון לביטול גזירת גיוס בני הישיבות. ניתן לשלוח שמות דרך גבאי האגודה.'],
+ ['meal1','שבתות','שבתות מרוממות בפשיסחה','קהילות וחבורות מגיעות לשבת בצל הקודש — באולם ערוך, בסעודות כיד המלך ובתפילות בהתעוררות.']
+];
+$('#ngrid').innerHTML=NEWS.map(function(n){return '<article class="nw reveal"><img src="img/'+n[0]+'.jpg" alt="" loading="lazy"><div><small>'+n[1]+'</small><h4>'+n[2]+'</h4><p>'+n[3]+'</p></div></article>'}).join('');
+
+/* ---------- forms ---------- */
+function tab(p){$$('#ftabs button').forEach(function(x){x.classList.toggle('on',x.dataset.p===p)});$$('.panel').forEach(function(x){x.classList.toggle('on',x.id==='p-'+p)})}
+$$('#ftabs button').forEach(function(b){b.onclick=function(){tab(b.dataset.p)}});
+document.addEventListener('click',function(e){var a=e.target.closest('[data-tab]');if(a)setTimeout(function(){tab(a.dataset.tab)},10)});
+function addName(){var d=document.createElement('div');d.className='nrow';d.innerHTML='<input placeholder="שם" data-n><em>בן/בת</em><input placeholder="שם האם" data-m><button type="button" aria-label="הסר">×</button>';d.querySelector('button').onclick=function(){if($$('#names .nrow').length>1)d.remove()};$('#names').appendChild(d)}
+addName();$('#addn').onclick=addName;
+var TITLES={stay:'בקשה ללינה וסעודות — דער ביאלה הויף פשיסחה',shabbos:'בקשה לשבת בפשיסחה',kvitel:'שמות לתפילה בציון — פשיסחה',guest:'הכנס אורח — דער ביאלה הויף',ded:'שותפות עם אורחי רבינו — פשיסחה'};
+function build(f){var lines=[],seen={};if(f.dataset.kind==='kvitel'){var ns=$$('#names .nrow').map(function(r){var n=r.querySelector('[data-n]').value.trim(),m=r.querySelector('[data-m]').value.trim();return n?n+(m?' בן/בת '+m:''):''}).filter(Boolean);if(!ns.length){toast('נא למלא לפחות שם אחד');return null}lines.push('שמות להזכרה:');ns.forEach(function(x){lines.push('• '+x)});lines.push('')}
+  $$('input,select,textarea',f).forEach(function(el){if(!el.name||el.hasAttribute('data-n')||el.hasAttribute('data-m'))return;if(el.type==='checkbox'){if(el.checked)seen[el.name]=(seen[el.name]?seen[el.name]+', ':'')+el.value;return}if(el.value.trim())lines.push(el.name+': '+el.value.trim())});
+  Object.keys(seen).forEach(function(k){lines.push(k+': '+seen[k])});return {title:TITLES[f.dataset.kind],body:lines.join('\n')}}
+function show(f,m){var r=$('.result',f),href='mailto:'+EMAIL+'?subject='+encodeURIComponent(m.title)+'&body='+encodeURIComponent(m.body);
+  r.innerHTML='<div class="ok">✓ הבקשה מוכנה לשליחה</div><pre></pre><div class="acts"><a class="btn btn-wine" href="'+href+'">שליחה במייל ←</a><button type="button" class="btn btn-line" data-copy>העתקה</button></div><div style="font-size:14px;color:var(--muted);margin-top:10px">או בטלפון ‎+972-3-619-6555 שלוחה 6 · '+EMAIL+'</div>';
+  $('pre',r).textContent=m.title+'\n\n'+m.body;r.classList.add('on');
+  $('[data-copy]',r).onclick=function(){var t=m.title+'\n\n'+m.body;(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){toast('הטקסט הועתק')},function(){toast('סמנו והעתיקו ידנית')})}}
+$$('form').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var m=build(f);if(m)show(f,m)})});
+$$('.pc').forEach(function(c){c.onclick=function(){$('#dm-t').textContent=c.dataset.p;$('#dm-n').value=c.dataset.p;$('#dm .result').classList.remove('on');$('#dm').classList.add('on')}});
+$('#dm .x').onclick=function(){$('#dm').classList.remove('on')};
+
+/* ---------- gallery + lightbox ---------- */
+var G=[['סעודות','food4','מנות דגים מעוצבות'],['סעודות','gal_plates','מנות ערוכות לקבוצה'],['סעודות','gal_platters','מגשי כיבוד'],['סעודות','gal_buffet','שולחן מאפים'],['סעודות','gal_settings','האולם ערוך לסעודה'],['סעודות','gal_meal','סעודה בהויף'],['סעודות','gal_hall','האולם מלא אורחים'],
+ ['האדמו״ר','gal_rebtable','בשולחן הטהור'],
+ ['בית הכנסת','oldshul_ext','בית הכנסת המיוחס מבחוץ'],['בית הכנסת','oldshul_a','בין העמודים'],['בית הכנסת','oldshul_b','תפילה בטליתות'],['בית הכנסת','oldshul_c','הבימה העתיקה'],['בית הכנסת','oldshul_ext2','קבוצה מגיעה לבית הכנסת'],
+ ['נוף','gal_walk','הליכה בשביל האגם'],['נוף','lake1','האגם'],['נוף','lake3','שביל האגם'],['נוף','lake2','פשיסחה הירוקה']];
+var cats=['הכל'].concat(G.map(function(g){return g[0]}).filter(function(v,i,a){return a.indexOf(v)===i})),gcur='הכל',glist=[];
+$('#gf').innerHTML=cats.map(function(c){return '<button'+(c==='הכל'?' class="on"':'')+'>'+c+'</button>'}).join('');
+function drawG(){glist=G.filter(function(g){return gcur==='הכל'||g[0]===gcur});$('#gm').innerHTML=glist.map(function(g,i){return '<figure data-i="'+i+'"><img src="img/'+g[1]+'.jpg" alt="'+g[2]+'" loading="lazy"><figcaption>'+g[2]+'</figcaption></figure>'}).join('')}drawG();
+$$('#gf button').forEach(function(b){b.onclick=function(){gcur=b.textContent;$$('#gf button').forEach(function(x){x.classList.toggle('on',x===b)});drawG()}});
+var lb=$('#lb'),li=0,lset=[];
+function showLb(){var g=lset[li];$('img',lb).src='img/'+g[0]+'.jpg';$('p',lb).textContent=g[1]||''}
+$('#gm').onclick=function(e){var f=e.target.closest('figure');if(!f)return;lset=glist.map(function(g){return [g[1],g[2]]});li=+f.dataset.i;showLb();lb.classList.add('on')};
+document.addEventListener('click',function(e){var z=e.target.closest('[data-z]');if(!z)return;var grp=$$('[data-z]',z.parentNode);lset=grp.map(function(x){return [x.dataset.z,'']});li=grp.indexOf(z);showLb();lb.classList.add('on')});
+$('.x',lb).onclick=function(){lb.classList.remove('on')};$('.pv',lb).onclick=function(){li=(li-1+lset.length)%lset.length;showLb()};$('.nx',lb).onclick=function(){li=(li+1)%lset.length;showLb()};
+$$('.ov').forEach(function(o){o.addEventListener('click',function(e){if(e.target===o){o.classList.remove('on');if(o.id==='sv')svClose()}})});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){$$('.ov.on').forEach(function(o){o.classList.remove('on')});clearTimeout(sv.t)}if(lb.classList.contains('on')){if(e.key==='ArrowLeft')$('.nx',lb).click();if(e.key==='ArrowRight')$('.pv',lb).click()}if($('#sv').classList.contains('on')){if(e.key==='ArrowLeft')svNext();if(e.key==='ArrowRight')svPrev()}});
+
+/* rotating section backgrounds */
+$$('.bgs').forEach(function(b){var l=b.dataset.slides.split(',');b.innerHTML=l.map(function(n){return '<div style="background-image:url(img/'+n+'.jpg)"></div>'}).join('');var d=$$('div',b),i=0;d[0].classList.add('on');setInterval(function(){d[i].classList.remove('on');i=(i+1)%d.length;d[i].classList.add('on')},5500)});
+
+/* routes map */
+var HOME=[51.3577,20.6299];
+var R=[['נמל התעופה ורשה','שדה התעופה שופן',52.1657,20.9671,120,110],['ראדושיץ','הסבא קדישא מראדושיץ',51.0742,20.2553,55,50],['פשעדבורז׳','ציוני צדיקים',51.0886,19.8768,80,70,1],['קוזניץ','המגיד מקוזניץ',51.5829,21.548,90,80],['גור','החידושי הרי״ם מגור',51.9768,21.2151,105,90],['ראדומסק','בעל התפארת שלמה',51.0675,19.4447,115,100],['פאריסוב','רבי יהושע אשר, בן היהודי הקדוש',51.9614,21.6797,130,110,1],['לעלוב','רבי דוד מלעלוב',50.6844,19.6283,135,120],['קאצק','רבי מנחם מנדל מקאצק',51.6406,22.4481,170,150],['לובלין','החוזה מלובלין',51.2465,22.5684,175,160],['קראקא','הרמ״א',50.0614,19.9366,200,170],['ליזענסק','הנועם אלימלך',50.2626,22.4203,230,200],['לאנצוט','ציוני צדיקים',50.0688,22.2294,235,210,1]];
+var PL=[[14.2,53.9],[14.6,52.6],[14.75,52.07],[14.6,51.6],[15.0,51.0],[15.8,50.75],[16.3,50.65],[16.2,50.4],[16.9,50.2],[17.7,50.3],[18.0,50.0],[18.6,49.9],[18.85,49.5],[19.4,49.6],[19.8,49.2],[20.5,49.4],[21.1,49.4],[22.0,49.2],[22.6,49.1],[22.9,49.5],[23.4,50.3],[24.1,50.6],[24.0,51.6],[23.6,52.0],[23.2,52.3],[23.9,52.7],[23.9,53.2],[23.5,53.9],[22.8,54.35],[21.4,54.35],[19.7,54.4],[18.6,54.4],[18.4,54.8],[17.2,54.75],[16.0,54.3]];
+var CX=[304.9795956371622,65.73807815001841,-3.114884365493269,-0.158890370526908,-0.2418704423094401,-4710.789814652066],CY=[-72.66678269747088,-507.6925439387874,1.5139195192968893,-0.49043258094964226,2.4404889047734346,20523.792537236255];function prj(lat,lon){var v=[lon,lat,lon*lat,lon*lon,lat*lat,1],x=0,y=0;for(var k=0;k<6;k++){x+=v[k]*CX[k];y+=v[k]*CY[k]}return [x,y]}
+var ONMAP={'לובלין':1,'קראקא':1};
+var LBL={'נמל התעופה ורשה':[0,-24,'✈ שדה התעופה'],'קוזניץ':[18,-8,null,'end'],'גור':[0,42],'פאריסוב':[0,-22],'ראדושיץ':[18,22,null,'end'],'פשעדבורז׳':[0,-22],'ראדומסק':[-18,9,null,'start'],'לעלוב':[-18,9,null,'start'],'קאצק':[0,-22],'ליזענסק':[18,9,null,'end'],'לאנצוט':[-18,12,null,'start']};
+var svg='<svg viewBox="0 0 1400 1215" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="glow"><stop offset="0" stop-color="#f3a33a"/><stop offset="1" stop-color="#f3a33a" stop-opacity="0"/></radialGradient></defs><image href="img/plmap.jpg" x="0" y="0" width="1400" height="1215"/>';
+var H=prj(HOME[0],HOME[1]);
+R.forEach(function(r,i){var q=prj(r[2],r[3]);svg+='<line x1="'+H[0]+'" y1="'+H[1]+'" x2="'+q[0]+'" y2="'+q[1]+'" stroke="#c0392b" stroke-opacity=".55" stroke-dasharray="8 7" stroke-width="3"/>'});
+R.forEach(function(r,i){var q=prj(r[2],r[3]),L=LBL[r[0]]||[0,-20],t=L[2]||r[0],a=L[3]||'middle';svg+='<g class="pt" data-i="'+i+'"><circle class="o" cx="'+q[0]+'" cy="'+q[1]+'" r="12" fill="#0d6b63" stroke="#fff" stroke-width="4"/>'+(ONMAP[r[0]]?'':'<text x="'+(q[0]+L[0])+'" y="'+(q[1]+L[1])+'" text-anchor="'+a+'" fill="#0b3b37" font-size="25" font-weight="800" font-family="Heebo" paint-order="stroke" stroke="#fff" stroke-width="6">'+t+'</text>')+'</g>'});
+svg+='<circle cx="'+H[0]+'" cy="'+H[1]+'" r="55" fill="url(#glow)"/><circle cx="'+H[0]+'" cy="'+H[1]+'" r="16" fill="#e0662a" stroke="#fff" stroke-width="5"/><text x="'+(H[0]-26)+'" y="'+(H[1]+10)+'" text-anchor="end" fill="#8a1c0e" font-size="34" font-weight="900" font-family="Frank Ruhl Libre" paint-order="stroke" stroke="#fff" stroke-width="8">🔥 פשיסחה</text></svg>';
+$('#map').innerHTML=svg;setTimeout(function(){$('#rl-l').onclick=function(){$('#rlist').scrollBy({left:-320,behavior:'smooth'})};$('#rl-r').onclick=function(){$('#rlist').scrollBy({left:320,behavior:'smooth'})}},0);
+function hm(m){var h=Math.floor(m/60),mm=m%60;return (h?h+':'+(mm<10?'0':'')+mm:mm+'׳')}
+$('#rlist').innerHTML=R.map(function(r,i){var p=Math.min(100,Math.round(r[5]/240*100));return '<div class="rc" data-i="'+i+'"><div class="tm" style="--p:'+p+'%"><span>'+hm(r[5])+'<br><small style="font-size:10px;font-weight:400">שעות</small></span></div><div><b>'+r[0]+'</b><small>'+r[1]+' · כ־'+r[4]+' ק״מ</small></div><a href="https://www.google.com/maps/dir/?api=1&origin=51.3577,20.6299&destination='+r[2]+','+r[3]+'" target="_blank" rel="noopener">ניווט ↗</a></div>'}).join('');
+function hl(i){$$('.rc').forEach(function(c){c.classList.toggle('on',+c.dataset.i===i)});$$('.pt').forEach(function(c){c.classList.toggle('on',+c.dataset.i===i)})}
+$('#map').addEventListener('mouseover',function(e){var g=e.target.closest('.pt');if(g)hl(+g.dataset.i)});
+$('#map').addEventListener('click',function(e){var g=e.target.closest('.pt');if(g){hl(+g.dataset.i);var c=$('.rc[data-i="'+g.dataset.i+'"]');c.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'})}});
+$('#rlist').addEventListener('mouseover',function(e){var c=e.target.closest('.rc');if(c)hl(+c.dataset.i)});
+
+
+var isTouch=('ontouchstart' in window)||navigator.maxTouchPoints>0||innerWidth<800;
+document.addEventListener('click',function(e){var a=e.target.closest('a[href^="tel:"],a[href^="mailto:"]');if(!a||isTouch||a.closest('#cp'))return;e.preventDefault();var tel=a.href.indexOf('tel:')===0,v=decodeURIComponent(a.href.replace(/^(tel:|mailto:)/,'').split('?')[0]);var shown=tel?(v.indexOf('+972')===0?'0'+v.slice(4):v):v;
+ $('#cp-i').textContent=tel?'📞':'✉️';$('#cp-v').textContent=shown;$('#cp-t').textContent=tel?'חיוג':'שליחת מייל';
+ $('#cp-a').innerHTML=tel?'<a class="btn btn-fire" data-raw="1" href="'+a.href+'">חיוג מהמחשב / מהטלפון המקושר</a>':'<a class="btn btn-fire" target="_blank" rel="noopener" href="https://mail.google.com/mail/?view=cm&to='+encodeURIComponent(v)+(a.href.indexOf('?')>0?'&'+a.href.split('?')[1].replace(/subject=/,'su='):'')+'">פתיחה בג׳ימייל</a><a class="btn btn-line" data-raw="1" href="'+a.href+'">תוכנת המייל במחשב</a>';
+ $('#cp-c').onclick=function(){(navigator.clipboard?navigator.clipboard.writeText(shown):Promise.reject()).then(function(){toast('הועתק')},function(){toast('סמנו והעתיקו ידנית')})};$('#cp').classList.add('on')},true);
+$('#cp .x').onclick=function(){$('#cp').classList.remove('on')};$('#cp').addEventListener('click',function(e){if(e.target.id==='cp')$('#cp').classList.remove('on')});
+obs();
+</script>
+</body>
+</html>
